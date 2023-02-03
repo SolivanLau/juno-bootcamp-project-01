@@ -1,0 +1,73 @@
+// color palette
+$primeGreen: #64A604;
+$secGreen: #DDED9A;
+
+$primeBlack: #2E2E2E;
+$secBlack: #333333;
+
+$primeGrey: #999999;
+
+$primeWhite: #F6F6F6;
+
+// fonts
+$titleFont: 'Raleway', sans-serif;
+$baseFont: 'Lora', serif;
+
+
+// typographic  styles
+
+@mixin titleFont {
+    font-family: $titleFont;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: left;
+    font-size: 2.3rem; //46px computed
+    line-height: 1.2rem; //24px computed
+    letter-spacing: .055rem; //1.1px computed
+}
+
+@mixin quoteFont {
+    font-family: $baseFont;
+    font-weight: 400;
+    font-style: italic;
+    text-align: center;
+    font-size: 1.2rem; //36px computed
+    line-height: 1.8rem; //36px computed
+    letter-spacing: .03rem; //.5px computed
+}
+
+@mixin footerHeadingFont {
+    font-family: $titleFont;
+    font-weight: bold;
+    text-align: left;
+    font-size: 0.9rem; //18px computed
+    line-height: 1.2rem; //24px computed
+    letter-spacing: 0.025rem; //.5px computed
+}
+
+@mixin bodyStyleFont {
+    font-family: $titleFont;
+    font-weight: bold;
+    text-align: left;
+    font-size: 0.9rem; //18px computed
+    line-height: 1.8rem; //36px computed
+    letter-spacing: 0.025rem; //.5px computed
+}
+
+@mixin bodyFont {
+    font-family: $baseFont;
+    font-weight: 400;
+    text-align: center;
+    font-size: 0.7rem; //14px computed
+    line-height: 1.2rem; //24px computed
+    letter-spacing: 0.015rem; //.3px computed
+}
+
+@mixin footingFont {
+    font-family: $baseFont;
+    font-weight: 400;
+    text-align: left;
+    font-size: 0.65rem; //13px computed
+    line-height: 1.2rem; //24px computed
+    letter-spacing: 0.015rem; //.3px computed
+}
