@@ -10,20 +10,21 @@ $primeGrey: #999999;
 $primeWhite: #F6F6F6;
 
 // fonts
-$titleFont: 'Raleway', sans-serif;
+$primeFont: 'Raleway', sans-serif;
 $baseFont: 'Lora', serif;
 
 
 // typographic  styles
 
 @mixin titleFont {
-    font-family: $titleFont;
+    font-family: $primeFont;
     font-weight: bold;
     text-transform: uppercase;
     text-align: left;
     font-size: 2.3rem; //46px computed
     line-height: 1.2rem; //24px computed
     letter-spacing: .055rem; //1.1px computed
+    color: $primeBlack;
 }
 
 @mixin quoteFont {
@@ -37,16 +38,17 @@ $baseFont: 'Lora', serif;
 }
 
 @mixin footerHeadingFont {
-    font-family: $titleFont;
+    font-family: $primeFont;
     font-weight: bold;
     text-align: left;
+    text-transform: uppercase;
     font-size: 0.9rem; //18px computed
     line-height: 1.2rem; //24px computed
     letter-spacing: 0.025rem; //.5px computed
 }
 
 @mixin bodyStyleFont {
-    font-family: $titleFont;
+    font-family: $primeFont;
     font-weight: bold;
     text-align: left;
     font-size: 0.9rem; //18px computed
@@ -70,4 +72,9 @@ $baseFont: 'Lora', serif;
     font-size: 0.65rem; //13px computed
     line-height: 1.2rem; //24px computed
     letter-spacing: 0.015rem; //.3px computed
+}
+
+.brand {
+    color: $primeGreen;
+    font-size: 2.3rem;
 }

@@ -1,0 +1,60 @@
+@use "./variables" as *;
+
+
+footer {
+    width: 100%;
+    background-color: $primeBlack;
+
+    & .wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+    }
+
+    & ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 90px 0;
+    }
+
+    & li {
+        width: 25%;
+    }
+
+    & h3 {
+        @include footerHeadingFont;
+        color: $primeWhite;
+        margin-bottom: 40px
+    }
+
+    & p {
+        @include footingFont;
+        text-align: left;
+    }
+}
+
+.email {
+    & form {
+        margin: 30px 0;
+    }
+
+    & .inputFormat {
+        display: flex
+    }
+
+    & input {
+        @include footingFont;
+        border: 1px solid $primeGrey;
+        background-color: $primeGrey;
+        border-radius: none;
+        width: 100%;
+    }
+
+    & button {
+        width: 40px;
+        height: 40px;
+        background-image: url(../assets/icons/next-arrow.svg);
+        background-size: contain;
+    }
+}
