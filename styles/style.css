@@ -267,7 +267,7 @@ figure {
 
 .wrapper {
   max-width: 1400px;
-  width: 85%;
+  width: 70%;
   margin: 0 auto;
 }
 
@@ -358,9 +358,14 @@ hr.light {
 
 header {
   background-image: url("../assets/home/home-1.jpeg");
+  background-repeat: no-repeat;
   background-position: top center;
   height: 100vh;
   width: 100%;
+}
+header.blog {
+  background-image: url("../assets/blog/blog-1.jpeg");
+  height: 80vh;
 }
 
 header .wrapper {
@@ -385,9 +390,13 @@ header ul {
           justify-content: space-between;
 }
 
-header .icon {
-  height: 30px;
+header svg {
+  fill: #2E2E2E;
   width: 30px;
+  height: 30px;
+}
+header svg:hover {
+  fill: #64A604;
 }
 
 footer {
@@ -478,7 +487,7 @@ footer p {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-.bulletin .recipes,
+.bulletin .popularRecipes,
 .bulletin .foodList {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -516,7 +525,7 @@ footer p {
   padding: 0 80px;
 }
 
-.recipes article p {
+.popularRecipes article p {
   margin: 40px 0;
 }
 
@@ -726,4 +735,72 @@ footer p {
 }
 .navArrow .next {
   background-image: url(../assets/icons/navigate-next.svg);
+}
+
+.recipes {
+  background-color: #F6F6F6;
+}
+.recipes h2 {
+  font-size: 2rem;
+  margin-top: 200px;
+}
+.recipes h3 {
+  text-transform: uppercase;
+  font-size: 0.7rem;
+}
+.recipes p {
+  text-align: left;
+  margin: 10px 0;
+}
+.recipes .recipeData p {
+  color: #2E2E2E;
+}
+.recipes article p {
+  margin: 20px 0;
+}
+
+.recipes .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.tags,
+.share {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.tags h3,
+.share h3 {
+  margin-right: 10px;
+}
+
+.share ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.share svg {
+  width: 20px;
+  height: 20px;
+  fill: #999999;
+  margin: 0 15px;
+}
+.share svg:hover,
+.share svg :focus-within {
+  fill: #64A604;
 }

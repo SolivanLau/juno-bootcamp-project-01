@@ -2,9 +2,15 @@
 
 header {
     background-image: url("../assets/home/home-1.jpeg");
+    background-repeat: no-repeat;
     background-position: top center;
     height: 100vh;
     width: 100%;
+
+    &.blog {
+        background-image: url("../assets/blog/blog-1.jpeg");
+        height: 80vh;
+    }
 }
 
 header .wrapper {
@@ -22,7 +28,12 @@ header ul {
     justify-content: space-between;
 }
 
-header .icon {
-    height: 30px;
+header svg {
+    fill: $primeBlack;
     width: 30px;
+    height: 30px;
+
+    &:hover {
+        fill: $primeGreen;
+    }
 }
