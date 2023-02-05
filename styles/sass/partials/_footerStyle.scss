@@ -32,6 +32,10 @@ footer {
         @include footingFont;
         text-align: left;
     }
+
+    & a {
+        text-transform: uppercase;
+    }
 }
 
 .email {
@@ -54,7 +58,15 @@ footer {
     & button {
         width: 40px;
         height: 40px;
-        background-image: url(../assets/icons/next-arrow.svg);
-        background-size: contain;
+        position: relative;
+    }
+
+    & svg {
+        fill: $primeWhite;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
     }
 }

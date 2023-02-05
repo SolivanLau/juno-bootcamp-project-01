@@ -1,5 +1,6 @@
 @use "./variables" as *;
 
+// height and background img setup
 header {
     background-image: url("../assets/home/home-1.jpeg");
     background-repeat: no-repeat;
@@ -11,29 +12,30 @@ header {
         background-image: url("../assets/blog/blog-1.jpeg");
         height: 80vh;
     }
-}
 
-header .wrapper {
-    width: 90%;
-    display: flex;
-    justify-content: space-between;
-    padding-top: 45px;
-}
+    // wrapper set up
+    & .wrapper {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 45px;
+    }
 
+    // flex format
+    ul {
+        width: 50%;
+        min-width: 680px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
-header ul {
-    width: 50%;
-    min-width: 680px;
-    display: flex;
-    justify-content: space-between;
-}
+    // svg styling
+    svg {
+        fill: $primeBlack;
 
-header svg {
-    fill: $primeBlack;
-    width: 30px;
-    height: 30px;
-
-    &:hover {
-        fill: $primeGreen;
+        &:hover {
+            fill: $primeGreen;
+        }
     }
 }

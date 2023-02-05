@@ -28,6 +28,7 @@
         justify-content: center;
         align-items: center;
         padding: 0 80px;
+        background-color: $primeWhite;
     }
 
 }
@@ -40,37 +41,8 @@
     }
 }
 
-// food list article
-// icon styling
-.foodIcon {
-    height: 40px;
-    width: 40px;
-    background-size: contain;
 
-    &.vege {
-        background-image: url(../assets/icons/fruit.svg);
-    }
 
-    &.app {
-        background-image: url(../assets/icons/fork-knife.svg);
-    }
-
-    &.dessert {
-        background-image: url(../assets/icons/coffee-mug.svg);
-    }
-
-    &.drinks {
-        background-image: url(../assets/icons/wine-glass.svg);
-    }
-
-    &.salad {
-        background-image: url(../assets/icons/leaf.svg);
-    }
-
-    &.side {
-        background-image: url(../assets/icons/spoon-knife.svg);
-    }
-}
 
 .foodList {
     background-color: $primeWhite;
@@ -93,6 +65,11 @@
         }
 
 
+    }
+
+    & .icon {
+        min-width: 40px;
+        min-height: 40px;
     }
 }
 
@@ -206,22 +183,19 @@
 
 .navArrow {
     margin-top: 100px;
-    width: 100px;
+    width: 120px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    & .previous,
-    .next {
-        height: 40px;
-        width: 40px;
+    & svg {
+        height: 65px;
+        width: 65px;
+        fill: #f6f6f6a8;
+
+        &:hover {
+            fill: $primeWhite;
+        }
     }
 
-    & .previous {
-        background-image: url(../assets/icons/navigate-before.svg);
-    }
-
-    & .next {
-        background-image: url(../assets/icons/navigate-next.svg);
-    }
 }

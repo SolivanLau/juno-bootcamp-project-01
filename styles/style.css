@@ -258,6 +258,17 @@ img {
   display: block;
 }
 
+svg {
+  min-width: 100%;
+  min-height: 100%;
+  display: block;
+}
+
+.icon {
+  width: 35px;
+  height: 35px;
+}
+
 figure {
   margin: 0;
   padding: 0;
@@ -367,7 +378,6 @@ header.blog {
   background-image: url("../assets/blog/blog-1.jpeg");
   height: 80vh;
 }
-
 header .wrapper {
   width: 90%;
   display: -webkit-box;
@@ -378,7 +388,6 @@ header .wrapper {
           justify-content: space-between;
   padding-top: 45px;
 }
-
 header ul {
   width: 50%;
   min-width: 680px;
@@ -388,12 +397,12 @@ header ul {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-
 header svg {
   fill: #2E2E2E;
-  width: 30px;
-  height: 30px;
 }
 header svg:hover {
   fill: #64A604;
@@ -449,6 +458,9 @@ footer p {
   letter-spacing: 0.015rem;
   text-align: left;
 }
+footer a {
+  text-transform: uppercase;
+}
 
 .email form {
   margin: 30px 0;
@@ -473,8 +485,15 @@ footer p {
 .email button {
   width: 40px;
   height: 40px;
-  background-image: url(../assets/icons/next-arrow.svg);
-  background-size: contain;
+  position: relative;
+}
+.email svg {
+  fill: #F6F6F6;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 .bulletin {
@@ -523,34 +542,11 @@ footer p {
       -ms-flex-align: center;
           align-items: center;
   padding: 0 80px;
+  background-color: #F6F6F6;
 }
 
 .popularRecipes article p {
   margin: 40px 0;
-}
-
-.foodIcon {
-  height: 40px;
-  width: 40px;
-  background-size: contain;
-}
-.foodIcon.vege {
-  background-image: url(../assets/icons/fruit.svg);
-}
-.foodIcon.app {
-  background-image: url(../assets/icons/fork-knife.svg);
-}
-.foodIcon.dessert {
-  background-image: url(../assets/icons/coffee-mug.svg);
-}
-.foodIcon.drinks {
-  background-image: url(../assets/icons/wine-glass.svg);
-}
-.foodIcon.salad {
-  background-image: url(../assets/icons/leaf.svg);
-}
-.foodIcon.side {
-  background-image: url(../assets/icons/spoon-knife.svg);
 }
 
 .foodList {
@@ -577,6 +573,10 @@ footer p {
   text-align: left;
   padding: 10px 0;
   font-size: 0.6rem;
+}
+.foodList .icon {
+  min-width: 40px;
+  min-height: 40px;
 }
 
 .about {
@@ -714,7 +714,7 @@ footer p {
 
 .navArrow {
   margin-top: 100px;
-  width: 100px;
+  width: 120px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -725,16 +725,13 @@ footer p {
       -ms-flex-align: center;
           align-items: center;
 }
-.navArrow .previous,
-.navArrow .next {
-  height: 40px;
-  width: 40px;
+.navArrow svg {
+  height: 65px;
+  width: 65px;
+  fill: rgba(246, 246, 246, 0.6588235294);
 }
-.navArrow .previous {
-  background-image: url(../assets/icons/navigate-before.svg);
-}
-.navArrow .next {
-  background-image: url(../assets/icons/navigate-next.svg);
+.navArrow svg:hover {
+  fill: #F6F6F6;
 }
 
 .recipes {

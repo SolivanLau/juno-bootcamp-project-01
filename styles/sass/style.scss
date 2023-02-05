@@ -8,3 +8,5 @@
 // page partials
 @use "./partials/homeStyles";
 @use "./partials/blogStyles";
+
+// reduce duplication - w in partials if repeating, restructure global
