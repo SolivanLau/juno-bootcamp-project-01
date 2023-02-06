@@ -265,6 +265,8 @@ svg {
 }
 
 .icon {
+  min-width: 35px;
+  min-height: 35px;
   width: 35px;
   height: 35px;
 }
@@ -335,8 +337,23 @@ a {
   color: #2E2E2E;
   font-size: 0.9rem;
   text-decoration: none;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 a:hover {
+  color: #64A604;
+}
+a.dataLink {
+  font-family: "Lora", serif;
+  font-weight: 400;
+  text-align: center;
+  font-size: 0.7rem;
+  line-height: 1.2rem;
+  letter-spacing: 0.015rem;
+  color: #2E2E2E;
+  text-transform: none;
+}
+a.dataLink:hover {
   color: #64A604;
 }
 
@@ -346,6 +363,8 @@ a:hover {
   border: 1px solid #64A604;
   padding: 10px 20px;
   color: #F6F6F6;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
 }
 .button:hover {
   color: #DDED9A;
@@ -377,6 +396,7 @@ header {
 header.blog {
   background-image: url("../assets/blog/blog-1.jpeg");
   height: 80vh;
+  background-color: #F6F6F6;
 }
 header .wrapper {
   width: 90%;
@@ -575,8 +595,7 @@ footer a {
   font-size: 0.6rem;
 }
 .foodList .icon {
-  min-width: 40px;
-  min-height: 40px;
+  margin-right: 5px;
 }
 
 .about {
@@ -755,7 +774,6 @@ footer a {
 .recipes article p {
   margin: 20px 0;
 }
-
 .recipes .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -792,12 +810,92 @@ footer a {
           justify-content: space-between;
 }
 .share svg {
-  width: 20px;
-  height: 20px;
   fill: #999999;
-  margin: 0 15px;
+  margin: 0 15px 0 0;
+  width: 35px;
+  height: 35px;
 }
 .share svg:hover,
 .share svg :focus-within {
   fill: #64A604;
+}
+
+.bio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 30px 0;
+}
+.bio figure {
+  -ms-flex-preferred-size: calc(10% - 20px);
+      flex-basis: calc(10% - 20px);
+  min-width: 200px;
+  min-height: 200px;
+}
+.bio article {
+  -ms-flex-preferred-size: calc(80% - 20px);
+      flex-basis: calc(80% - 20px);
+  background-color: rgba(153, 153, 153, 0.1294117647);
+  padding: 30px;
+}
+
+.relatedGallery {
+  background-color: #F6F6F6;
+}
+.relatedGallery h4 {
+  font-size: 0.85rem;
+}
+.relatedGallery p {
+  text-align: left;
+}
+.relatedGallery .wrapper {
+  padding: 30px 0;
+}
+.relatedGallery ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.relatedGallery li {
+  -ms-flex-preferred-size: 31%;
+      flex-basis: 31%;
+}
+.relatedGallery figure {
+  width: 100%;
+  min-width: 300px;
+  position: relative;
+}
+.relatedGallery article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.relatedGallery .data {
+  margin-top: 10px;
+}
+.relatedGallery .overlay {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  opacity: 0;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  background-color: rgba(220, 237, 154, 0.2431372549);
+}
+.relatedGallery .overlay:hover {
+  opacity: 1;
 }

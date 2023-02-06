@@ -43,7 +43,7 @@
 
 
 
-
+// food list section
 .foodList {
     background-color: $primeWhite;
 
@@ -68,8 +68,7 @@
     }
 
     & .icon {
-        min-width: 40px;
-        min-height: 40px;
+        margin-right: 5px;
     }
 }
 

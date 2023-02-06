@@ -1,8 +1,9 @@
 @use "./variables" as *;
 
 // RECIPE SECTION
-// background color and font styles
+
 .recipes {
+    // background color and font styles
     background-color: $primeWhite;
 
     & h2 {
@@ -27,14 +28,15 @@
     & article p {
         margin: 20px 0;
     }
+
+    // flex layout 
+    & .wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 }
 
-// flex layout 
-.recipes .wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
 
 .tags,
 .share {
@@ -46,6 +48,7 @@
     }
 }
 
+// NEED SVG FIX HERE
 .share {
     & ul {
         display: flex;
@@ -53,14 +56,97 @@
     }
 
     & svg {
-        width: 20px;
-        height: 20px;
         fill: $primeGrey;
-        margin: 0 15px;
+        margin: 0 15px 0 0;
+        width: 35px;
+        height: 35px;
 
         &:hover,
         :focus-within {
             fill: $primeGreen;
+        }
+    }
+}
+
+.bio {
+    // flex format
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+
+    // figure styling
+    & figure {
+        flex-basis: calc(10% - 20px);
+        min-width: 200px;
+        min-height: 200px;
+    }
+
+    // text stlying
+    & article {
+        flex-basis: calc(80% - 20px);
+        background-color: #99999921;
+        padding: 30px;
+    }
+}
+
+// RELATED POSTS GALLERY SECTION
+
+.relatedGallery {
+    background-color: $primeWhite;
+
+    // font adjustment
+    & h4 {
+        font-size: .85rem;
+    }
+
+    & p {
+        text-align: left;
+    }
+
+    // flex layout
+    & .wrapper {
+        padding: 30px 0;
+    }
+
+    & ul {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    & li {
+        flex-basis: 31%;
+    }
+
+    & figure {
+        width: 100%;
+        min-width: 300px;
+        position: relative;
+    }
+
+    & article {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .data {
+        margin-top: 10px;
+    }
+
+    // overlay effect
+    .overlay {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        position: absolute;
+        opacity: 0;
+        transition: 0.3s ease-in-out;
+        background-color: $overlaySecGreen;
+
+        &:hover {
+            opacity: 1;
         }
     }
 }

@@ -33,6 +33,8 @@ svg {
 }
 
 .icon {
+    min-width: 35px;
+    min-height: 35px;
     width: 35px;
     height: 35px;
 }
@@ -72,11 +74,22 @@ a {
     @include titleFont;
     font-size: 0.9rem;
     text-decoration: none;
+    transition: 0.3s ease;
 
     &:hover {
         color: $primeGreen;
     }
 
+    // blog data link styling
+    &.dataLink {
+        @include bodyFont;
+        color: $primeBlack;
+        text-transform: none;
+
+        &:hover {
+            color: $primeGreen;
+        }
+    }
 }
 
 // button styling
@@ -86,6 +99,7 @@ a {
     border: 1px solid $primeGreen;
     padding: 10px 20px;
     color: $primeWhite;
+    transition: .2s ease;
 
     &:hover {
         color: $secGreen;

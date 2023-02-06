@@ -1,16 +1,19 @@
 @use "./variables" as *;
 
-// height and background img setup
+
 header {
+    // height and background img setup
     background-image: url("../assets/home/home-1.jpeg");
     background-repeat: no-repeat;
     background-position: top center;
     height: 100vh;
     width: 100%;
 
+    // blog.html img and height setup
     &.blog {
         background-image: url("../assets/blog/blog-1.jpeg");
         height: 80vh;
+        background-color: $primeWhite;
     }
 
     // wrapper set up
