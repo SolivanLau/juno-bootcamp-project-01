@@ -2,15 +2,18 @@
 
 
 footer {
+    // flex fomat: .wrapper and .copyright
     width: 100%;
-    background-color: $primeBlack;
+    display: flex;
+    flex-direction: column;
+    background-color: $secBlack;
 
+    // wrapper adjustment
     & .wrapper {
-        display: flex;
-        flex-direction: column;
         width: 70%;
     }
 
+    // flex fomat: ul as horizontal
     & ul {
         display: flex;
         flex-direction: row;
@@ -22,10 +25,20 @@ footer {
         width: 25%;
     }
 
+    // font adjustments
     & h3 {
         @include footerHeadingFont;
         color: $primeWhite;
         margin-bottom: 40px
+    }
+
+    & h4 {
+        font-weight: 400;
+    }
+
+    & a {
+        @include footingFont;
+        text-transform: none;
     }
 
     & p {
@@ -33,9 +46,6 @@ footer {
         text-align: left;
     }
 
-    & a {
-        text-transform: uppercase;
-    }
 }
 
 .email {
@@ -49,8 +59,8 @@ footer {
 
     & input {
         @include footingFont;
-        border: 1px solid $primeGrey;
-        background-color: $primeGrey;
+        border: 1px solid $primeBlack;
+        background-color: $primeBlack;
         border-radius: none;
         width: 100%;
     }
@@ -62,11 +72,21 @@ footer {
     }
 
     & svg {
-        fill: $primeWhite;
+        fill: $preHoverWhite;
         position: absolute;
         top: 0;
         right: 0;
         bottom: 0;
         left: 0;
+        transition: 0.2s ease;
+
+        &:hover {
+            fill: $primeWhite;
+        }
     }
+}
+
+.copyright {
+    background-color: $primeBlack;
+    padding: 10px;
 }

@@ -34,11 +34,61 @@ header {
     }
 
     // svg styling
-    svg {
+    & svg {
         fill: $primeBlack;
+        transition: 0.2s ease;
 
         &:hover {
             fill: $primeGreen;
         }
     }
+
+    & .wrapper {
+        position: relative
+    }
+
+    & .jumpToMain {
+        position: absolute;
+        transition: 0.2s ease;
+        top: -50px;
+        left: 0px;
+
+        &:hover {
+            top: 0px;
+
+        }
+
+        &:hover>h2 {
+            color: $primeGreen;
+        }
+
+
+        & h2 {
+            background-color: $secGreen;
+            padding: 10px;
+            border: 1px solid $secGreen;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            text-align: left;
+            position: relative;
+            z-index: 10;
+        }
+
+        & div {
+            display: inline-block;
+            height: 80px;
+            width: 40px;
+            background-color: $secGreen;
+            border: 1px solid $secGreen;
+            border-radius: 50px;
+            position: absolute;
+            bottom: -40px;
+        }
+
+        & svg {
+            transform: rotate(0.25turn);
+            width: 70px;
+        }
+    }
+
 }

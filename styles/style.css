@@ -423,16 +423,56 @@ header ul {
 }
 header svg {
   fill: #2E2E2E;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
 }
 header svg:hover {
   fill: #64A604;
 }
+header .wrapper {
+  position: relative;
+}
+header .jumpToMain {
+  position: absolute;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+  top: -50px;
+  left: 0px;
+}
+header .jumpToMain:hover {
+  top: 0px;
+}
+header .jumpToMain:hover > h2 {
+  color: #64A604;
+}
+header .jumpToMain h2 {
+  background-color: #DDED9A;
+  padding: 10px;
+  border: 1px solid #DDED9A;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  text-align: left;
+  position: relative;
+  z-index: 10;
+}
+header .jumpToMain div {
+  display: inline-block;
+  height: 80px;
+  width: 40px;
+  background-color: #DDED9A;
+  border: 1px solid #DDED9A;
+  border-radius: 50px;
+  position: absolute;
+  bottom: -40px;
+}
+header .jumpToMain svg {
+  -webkit-transform: rotate(0.25turn);
+          transform: rotate(0.25turn);
+  width: 70px;
+}
 
 footer {
   width: 100%;
-  background-color: #2E2E2E;
-}
-footer .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -440,6 +480,9 @@ footer .wrapper {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  background-color: #333333;
+}
+footer .wrapper {
   width: 70%;
 }
 footer ul {
@@ -469,6 +512,19 @@ footer h3 {
   color: #F6F6F6;
   margin-bottom: 40px;
 }
+footer h4 {
+  font-weight: 400;
+}
+footer a {
+  font-family: "Lora", serif;
+  font-weight: 400;
+  text-align: left;
+  font-size: 0.65rem;
+  line-height: 1.2rem;
+  letter-spacing: 0.015rem;
+  color: #999999;
+  text-transform: none;
+}
 footer p {
   font-family: "Lora", serif;
   font-weight: 400;
@@ -476,10 +532,8 @@ footer p {
   font-size: 0.65rem;
   line-height: 1.2rem;
   letter-spacing: 0.015rem;
+  color: #999999;
   text-align: left;
-}
-footer a {
-  text-transform: uppercase;
 }
 
 .email form {
@@ -497,8 +551,9 @@ footer a {
   font-size: 0.65rem;
   line-height: 1.2rem;
   letter-spacing: 0.015rem;
-  border: 1px solid #999999;
-  background-color: #999999;
+  color: #999999;
+  border: 1px solid #2E2E2E;
+  background-color: #2E2E2E;
   border-radius: none;
   width: 100%;
 }
@@ -508,12 +563,22 @@ footer a {
   position: relative;
 }
 .email svg {
-  fill: #F6F6F6;
+  fill: rgba(246, 246, 246, 0.6588235294);
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+.email svg:hover {
+  fill: #F6F6F6;
+}
+
+.copyright {
+  background-color: #2E2E2E;
+  padding: 10px;
 }
 
 .bulletin {
@@ -663,7 +728,8 @@ footer a {
       flex-wrap: wrap;
 }
 .gallery ul li {
-  width: 33%;
+  -ms-flex-preferred-size: 33%;
+      flex-basis: 33%;
 }
 
 .review {
@@ -748,6 +814,8 @@ footer a {
   height: 65px;
   width: 65px;
   fill: rgba(246, 246, 246, 0.6588235294);
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
 }
 .navArrow svg:hover {
   fill: #F6F6F6;

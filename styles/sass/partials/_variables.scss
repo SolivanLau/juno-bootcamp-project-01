@@ -10,6 +10,7 @@ $secBlack: #333333;
 $primeGrey: #999999;
 
 $primeWhite: #F6F6F6;
+$preHoverWhite: #f6f6f6a8;
 
 // fonts
 $primeFont: 'Raleway', sans-serif;
@@ -74,6 +75,7 @@ $baseFont: 'Lora', serif;
     font-size: 0.65rem; //13px computed
     line-height: 1.2rem; //24px computed
     letter-spacing: 0.015rem; //.3px computed
+    color: $primeGrey;
 }
 
 .brand {
