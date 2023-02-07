@@ -62,7 +62,6 @@ $baseFont: 'Lora', serif;
 @mixin bodyFont {
     font-family: $baseFont;
     font-weight: 400;
-    text-align: center;
     font-size: 0.7rem; //14px computed
     line-height: 1.2rem; //24px computed
     letter-spacing: 0.015rem; //.3px computed
@@ -75,10 +74,5 @@ $baseFont: 'Lora', serif;
     font-size: 0.65rem; //13px computed
     line-height: 1.2rem; //24px computed
     letter-spacing: 0.015rem; //.3px computed
-    color: $primeGrey;
-}
 
-.brand {
-    color: $primeGreen;
-    font-size: 2.3rem;
 }

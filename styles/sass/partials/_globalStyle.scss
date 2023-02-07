@@ -52,6 +52,7 @@ figure {
     margin: 0 auto;
 }
 
+
 h1 {
     @include titleFont;
 }
@@ -61,9 +62,12 @@ h2 {
     font-size: 1.2rem; //computed 24px
 }
 
-h3 {
+h3,
+h4 {
     @include bodyStyleFont;
 }
+
+
 
 p {
     @include bodyFont;
@@ -71,41 +75,60 @@ p {
 }
 
 a {
-    // header styling
-    @include titleFont;
-    font-size: 0.9rem;
+
+    // blog.html data link styling
+    &.dataLink {
+        @include bodyFont;
+        text-transform: none;
+    }
+
+    color: $primeBlack;
     text-decoration: none;
     transition: 0.3s ease;
 
-    &:hover {
+    &:hover,
+    &:focus {
         color: $primeGreen;
+        fill: $primeGreen;
     }
 
-    // blog data link styling
-    &.dataLink {
-        @include bodyFont;
-        color: $primeBlack;
-        text-transform: none;
-
-        &:hover {
-            color: $primeGreen;
-        }
+    &:focus {
+        border-color: $secGreen;
     }
+
+
 }
 
-// button styling
+
 .button {
+    // button format
     display: inline-block;
     background-color: $primeGreen;
     border: 1px solid $primeGreen;
     padding: 10px 20px;
-    color: $primeWhite;
+
+    // text styling
+    @include titleFont;
+    color: $preHoverWhite;
+    font-size: 0.9rem;
     transition: .2s ease;
 
-    &:hover {
-        color: $secGreen;
+
+    // hover state and focus state
+    &:hover,
+    :focus {
+        color: $primeWhite;
         cursor: pointer;
     }
+
+    &:focus {
+        border-color: $secGreen;
+    }
+}
+
+.brand {
+    color: $primeGreen;
+    font-size: 2.3rem;
 }
 
 hr {

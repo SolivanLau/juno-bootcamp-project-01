@@ -32,17 +32,17 @@ footer {
         margin-bottom: 40px
     }
 
-    & h4 {
-        font-weight: 400;
+    & h4,
+    p,
+    a {
+        @include footingFont;
     }
 
-    & a {
-        @include footingFont;
-        text-transform: none;
+    a {
+        color: $primeGrey;
     }
 
     & p {
-        @include footingFont;
         text-align: left;
     }
 

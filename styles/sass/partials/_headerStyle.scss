@@ -33,6 +33,19 @@ header {
         align-items: center;
     }
 
+    h1 {
+        transition: 0.2s ease;
+
+        &:hover {
+            color: $primeGreen;
+        }
+    }
+
+    a {
+        @include titleFont;
+        font-size: 0.9rem;
+    }
+
     // svg styling
     & svg {
         fill: $primeBlack;
@@ -48,6 +61,7 @@ header {
     }
 
 
+
 }
 
 // jump to main section
@@ -58,9 +72,19 @@ header {
     left: 0px;
 
     &:hover,
-    :focus-within {
+    :focus {
         top: 0px;
+
+        svg {
+            color: $primeGreen;
+            fill: $primeGreen;
+        }
+
+        h2 {
+            color: $primeGreen;
+        }
     }
+
 
 
     & h2 {
@@ -82,9 +106,6 @@ header {
 
 }
 
-.jumpLink:hover {
-    color: $primeGreen;
-}
 
 .arrowDisplay {
     display: inline-block;

@@ -14,9 +14,9 @@
     <header class="blog">
         <nav>
             <div class="wrapper">
-                <h1>Delicious</h1>
+                <a href="#"><h1>Delicious</h1></a>
                 <ul>
-                    <li><a href="#">Home</a></li>
+                    <li><a href="./index.html">Home</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Recipes</a></li>
                     <li><a href="#">Nutrition</a></li>
@@ -38,10 +38,20 @@
                         </a>
                     </li>
                 </ul>
+                <div class="jumpToMain">
+                    <a href="#main" class="jumpLink">
+                        <h2>Jump to main content here!</h2>
+                        <div class="arrowDisplay">
+                            <svg class="jumpArrow" xmlns="http://www.w3.org/2000/svg" height="30" width="30" viewBox="-33 -33 80 80" aria-hidden="true" focusable="false">
+                                <path d="M26.2 35.5q-.65-.7-.675-1.675-.025-.975.625-1.625l6-5.95H9.3q-1 0-1.675-.675T6.95 23.9q0-1 .675-1.675T9.3 21.55h22.85L26.1 15.5q-.65-.65-.625-1.6.025-.95.675-1.65.7-.65 1.675-.65.975 0 1.625.65l9.95 10q.35.35.55.775.2.425.2.875t-.2.875q-.2.425-.55.775l-9.9 9.95q-.7.7-1.65.675-.95-.025-1.65-.675Z"/>
+                            </svg>
+                        </div>
+                    </a>
+                </div>
             </div>
         </nav>
     </header>
-    <main>
+    <main id="main">
         <section class="recipes">
             <div class="wrapper">
                 <h2>Pineapple Chicken</h2>
@@ -143,7 +153,6 @@
                         </a>
                         
                         <article>
-                            
                             <a href="#"><h4>Fancy up a Salmon Breakfast</h4></a>
                             <div class="data">
                                 <p>June 11, 2017 | by <a href="#" class="dataLink">Grant Wood</a> | in <a href="#" class="dataLink">Recipes</a></p>
@@ -158,27 +167,102 @@
             <div class="wrapper">
                 <h3>02 Comments</h3>
                 
-                <div class="commentSpace">
-                    
+                <div class="commentDisplay">
+                    <!-- COMMENT ONE -->
                     <div class="individualComment">
+
+                        <!-- profilePic -->
                         <a href="#">
-                            <figure class="profilePic">
+                            <figure class="profilePic commentItem">
                                 <img src="./assets/blog/blog-6.jpeg" alt="Profile picture of Lucia Marcello">
+                                <div class="overlay"></div>
                             </figure>
                         </a>
-
-                        <div class="msgContainer">
+                        <!-- msg -->
+                        <div class="msgContainer commentItem">
                             <div class="postBio">
-                                <h4>Lucia Marcello</h4>
-                                <p class="postData">- Web Developer</p>
+                                <a href="#">
+                                    <h4>Lucia Marcello</h4>
+                                </a>
+                                <p class="postData">- Home Cook</p>
                             </div>
                             <p>Croissant sesame snaps biscuit cake cupcake sugar plum fruitcake I love gummies. Candy cake sesame snaps jelly-o tart. Gummies chupa chups marshmallow I love bear claw bear claw liquorice. Halvah ice cream danish chocolate bar I love donut candy canes soufflé danish. Croissant bear claw apple pie macaroon shortbread carrot cake pie. Marzipan toffee tiramisu shortbread candy cake sweet roll tiramisu.</p>
                             <div class="timeStampContainer">
                                 <p class="postData">April 19, 2020 at 10 hours ago</p>
                             </div>
+                            <div class="msgTailContainer">
+                                <svg height="30px" width="30px" class="msgTail">
+                                    <polygon points="15,15 30,25 30,5" />
+                                  </svg> 
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- COMMENT TWO -->
+                    <div class="individualComment">
+                        <!-- profilePic -->
+                        <a href="#">
+                            <figure class="profilePic commentItem">
+                                <img src="./assets/blog/blog-7.jpeg" alt="Profile picture of Mara Smith">
+                                <div class="overlay"></div>
+                            </figure>
+                        </a>
+                        <!-- msg -->
+                        <div class="msgContainer commentItem">
+                            <!-- name and role -->
+                            <div class="postBio">
+                                <a href="#">
+                                    <h4>Mara Smith</h4>
+                                </a>
+                                <p class="postData">- Pastry Chef</p>
+                            </div>
+                            <p>Celery quandong swiss chard chicory earthnut pea potato. Salsify taro catsear garlic gram celery bitterleaf wattle seed collard greens nori. Grape wattle seed kombu beetroot horseradish carrot squash brussels sprout chard.</p>
+                            <!-- time stamp -->
+                            <div class="timeStampContainer">
+                                <p class="postData">April 19, 2020 at 10 hours ago</p>
+                            </div>
+                            <!-- msg bubble tail -->
+                            <div class="msgTailContainer">
+                                <svg height="30px" width="30px" class="msgTail">
+                                    <polygon points="15,15 30,25 30,5" />
+                                  </svg> 
+                            </div>
                         </div>
                     </div>
                 </div>
+
+                <!-- USER COMMENT FORM -->
+                <form action="#" class="userComment">
+                    <!-- intro to form -->
+                    <div class="formIntro">
+                        <h3>Leave a Comment</h3>
+                        <p>Your email address will not be published. Required fields are marked*</p>
+                    </div>
+                    <div class="userInfo">
+                        <!-- name input-->
+                        <label for="userName" class="sr-only">Enter name</label>
+                        <input type="text" name="userName" id="userName" placeholder="Name *" required>
+                        
+                        <!-- email input-->
+                        <label for="email" class="sr-only">Enter email</label>
+                        <input type="email" name="email" id="email" placeholder="Email *" required>
+                        <!-- website input -->
+                        <label for="website" class="sr-only">Enter website url</label>
+                        <input type="text" name="website" id="website" placeholder="Your Website">
+                    </div>
+
+                    <!-- comment input -->
+                    <div class="userComment">
+                        <label for="comment" class="sr-only">Type comment here</label>
+                        <textarea name="comment *" id="comment" rows="6" placeholder="Comment *" required></textarea>
+                    </div>
+
+                    <!-- button submit -->
+                    <div class="buttonContainer">
+                        <button type="submit" class="button">Submit Comment</button>
+                    </div>
+
+                </form>
             </div>
             
         </section>
