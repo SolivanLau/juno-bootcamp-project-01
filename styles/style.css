@@ -234,6 +234,7 @@ html {
 
 html {
   font-size: 125%;
+  scroll-behavior: smooth;
 }
 
 h1,
@@ -432,20 +433,27 @@ header svg:hover {
 header .wrapper {
   position: relative;
 }
-header .jumpToMain {
+
+.jumpToMain {
   position: absolute;
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
   top: -50px;
   left: 0px;
 }
-header .jumpToMain:hover {
+.jumpToMain:hover,
+.jumpToMain :focus-within {
   top: 0px;
 }
-header .jumpToMain:hover > h2 {
-  color: #64A604;
-}
-header .jumpToMain h2 {
+.jumpToMain h2 {
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: left;
+  font-size: 2.3rem;
+  line-height: 1.2rem;
+  letter-spacing: 0.055rem;
+  color: #2E2E2E;
   background-color: #DDED9A;
   padding: 10px;
   border: 1px solid #DDED9A;
@@ -454,8 +462,18 @@ header .jumpToMain h2 {
   text-align: left;
   position: relative;
   z-index: 10;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
 }
-header .jumpToMain div {
+.jumpToMain h2:hover {
+  color: #64A604;
+}
+
+.jumpLink:hover {
+  color: #64A604;
+}
+
+.arrowDisplay {
   display: inline-block;
   height: 80px;
   width: 40px;
@@ -465,7 +483,8 @@ header .jumpToMain div {
   position: absolute;
   bottom: -40px;
 }
-header .jumpToMain svg {
+
+.jumpArrow {
   -webkit-transform: rotate(0.25turn);
           transform: rotate(0.25turn);
   width: 70px;
@@ -836,7 +855,7 @@ footer p {
   text-align: left;
   margin: 10px 0;
 }
-.recipes .recipeData p {
+.recipes .postData p {
   color: #2E2E2E;
 }
 .recipes article p {
@@ -966,4 +985,40 @@ footer p {
 }
 .relatedGallery .overlay:hover {
   opacity: 1;
+}
+
+.individualComment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.profilePic {
+  -ms-flex-preferred-size: 10;
+      flex-basis: 10;
+}
+
+.msgContainer {
+  margin-left: 30px;
+  -ms-flex-preferred-size: calc(80% - 30px);
+      flex-basis: calc(80% - 30px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.msgContainer p {
+  text-align: left;
+}
+
+.postBio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.postBio h4 {
+  margin-right: 10px;
 }

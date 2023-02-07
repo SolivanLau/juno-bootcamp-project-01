@@ -21,7 +21,7 @@
         margin: 10px 0;
     }
 
-    & .recipeData p {
+    & .postData p {
         color: $primeBlack;
     }
 
@@ -148,5 +148,40 @@
         &:hover {
             opacity: 1;
         }
+    }
+}
+
+
+// COMMENT SECTION
+
+// comment space
+
+// individual comment
+
+// flex format: profilePic and msgContainer
+.individualComment {
+    display: flex;
+}
+
+.profilePic {
+    flex-basis: calc(100 / 10);
+}
+
+.msgContainer {
+    margin-left: 30px;
+    flex-basis: calc(80% - 30px);
+    display: flex;
+    flex-direction: column;
+
+    & p {
+        text-align: left;
+    }
+}
+
+.postBio {
+    display: flex;
+
+    & h4 {
+        margin-right: 10px;
     }
 }
