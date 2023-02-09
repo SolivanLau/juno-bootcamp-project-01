@@ -1,12 +1,12 @@
 // setup partials
 @use "./partials/setup";
 @use "./partials/variables" as *;
-@use "./partials/globalStyle" as *;
+@use "./partials/global" as *;
 // reusable styles
-@use "./partials/headerStyle";
-@use "./partials/footerStyle";
+@use "./partials/header";
+@use "./partials/footer";
 // page partials
-@use "./partials/homeStyles";
-@use "./partials/blogStyles";
-
-// reduce duplication - w in partials if repeating, restructure global
+@use "./partials/homePage";
+@use "./partials/blog";
+@use "./partials/contact";
+// media queries

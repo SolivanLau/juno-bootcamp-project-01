@@ -86,7 +86,7 @@ h3 {
     // text stlying
     & article {
         flex-basis: calc(80% - 20px);
-        background-color: #99999921;
+        background-color: $secGrey;
         padding: 30px;
     }
 }
@@ -184,7 +184,7 @@ figure {
     flex-direction: column;
 
     // styling
-    background-color: #99999921;
+    background-color: $secGrey;
     padding: 15px;
 
     & p {
@@ -230,7 +230,7 @@ figure {
 }
 
 .msgTail {
-    fill: #99999921;
+    fill: $secGrey;
 }
 
 
@@ -239,19 +239,6 @@ figure {
     // flex format for form sections
     display: flex;
     flex-direction: column;
-
-    // input styling
-    input,
-    textarea {
-        @include bodyFont;
-        padding: 5px;
-        border: 2px solid #99999921;
-    }
-
-    textarea {
-        resize: none;
-        width: 100%;
-    }
 }
 
 .formIntro,

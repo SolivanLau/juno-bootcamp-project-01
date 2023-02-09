@@ -1,10 +1,12 @@
 @use "./variables" as *;
 
+// fontsize increase
 html {
     font-size: 125%;
     scroll-behavior: smooth;
 }
 
+// stripping default styles
 h1,
 h2,
 h3,
@@ -52,7 +54,7 @@ figure {
     margin: 0 auto;
 }
 
-
+// typographic pairings to elements
 h1 {
     @include titleFont;
 }
@@ -74,6 +76,7 @@ p {
     color: $primeGrey;
 }
 
+// link style and functionality
 a {
 
     // blog.html data link styling
@@ -95,8 +98,6 @@ a {
     &:focus {
         border-color: $secGreen;
     }
-
-
 }
 
 
@@ -124,6 +125,36 @@ a {
     &:focus {
         border-color: $secGreen;
     }
+
+    &.reverse {
+        // text styling
+        @include titleFont;
+        color: $primeGreen;
+        font-size: 0.75rem;
+        transition: .2s ease;
+
+        // button styling
+        display: flex;
+        align-items: center;
+        background-color: $primeWhite;
+        border: 1px solid $primeWhite;
+        padding: 5px 20px;
+
+        svg {
+            fill: $primeGreen;
+            transition: .2s ease;
+        }
+
+        &:hover,
+        &:focus {
+            color: $primeBlack;
+            border: 1px solid $primeGreen;
+
+            svg {
+                fill: $primeBlack;
+            }
+        }
+    }
 }
 
 .brand {
@@ -145,4 +176,17 @@ hr {
         height: 1px;
         margin: 8px 0;
     }
+}
+
+// form input style
+input,
+textarea {
+    @include bodyFont;
+    padding: 5px;
+    border: 2px solid $secGrey;
+}
+
+textarea {
+    resize: none;
+    width: 100%;
 }

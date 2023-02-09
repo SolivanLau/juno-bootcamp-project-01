@@ -9,11 +9,19 @@ header {
     height: 100vh;
     width: 100%;
 
-    // blog.html img and height setup
-    &.blog {
-        background-image: url("../assets/blog/blog-1.jpeg");
+    // img and height setup
+    &.blog,
+    &.contact {
         height: 80vh;
         background-color: $primeWhite;
+    }
+
+    &.blog {
+        background-image: url("../assets/blog/blog-1.jpeg");
+    }
+
+    &.contact {
+        background-image: url("../assets/contact/contact-1.jpeg");
     }
 
     // wrapper set up
@@ -44,6 +52,14 @@ header {
     a {
         @include titleFont;
         font-size: 0.9rem;
+
+        &:hover,
+        &:focus {
+            svg {
+                fill: $primeGreen;
+            }
+
+        }
     }
 
     // svg styling
@@ -51,7 +67,8 @@ header {
         fill: $primeBlack;
         transition: 0.2s ease;
 
-        &:hover {
+        &:hover,
+        &:focus {
             fill: $primeGreen;
         }
     }
@@ -72,7 +89,7 @@ header {
     left: 0px;
 
     &:hover,
-    :focus {
+    &:focus {
         top: 0px;
 
         svg {

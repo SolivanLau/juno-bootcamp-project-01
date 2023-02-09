@@ -13,18 +13,6 @@ footer {
         width: 70%;
     }
 
-    // flex fomat: ul as horizontal
-    & ul {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 90px 0;
-    }
-
-    & li {
-        width: 25%;
-    }
-
     // font adjustments
     & h3 {
         @include footerHeadingFont;
@@ -48,6 +36,19 @@ footer {
 
 }
 
+// flex fomat: ul as horizontal
+.siteMap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 90px 0;
+}
+
+.mapItem {
+    width: 25%;
+}
+
+// email sub column
 .email {
     & form {
         margin: 30px 0;
@@ -63,13 +64,24 @@ footer {
         background-color: $primeBlack;
         border-radius: none;
         width: 100%;
+        color: $primeWhite;
     }
 
     & button {
         width: 40px;
         height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         position: relative;
+
+        &:hover {
+            svg {
+                fill: $primeWhite;
+            }
+        }
     }
+
 
     & svg {
         fill: $preHoverWhite;
@@ -79,10 +91,6 @@ footer {
         bottom: 0;
         left: 0;
         transition: 0.2s ease;
-
-        &:hover {
-            fill: $primeWhite;
-        }
     }
 }
 

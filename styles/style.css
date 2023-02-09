@@ -370,6 +370,41 @@ a:focus {
 .button:focus {
   border-color: #DDED9A;
 }
+.button.reverse {
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: left;
+  font-size: 2.3rem;
+  line-height: 1.2rem;
+  letter-spacing: 0.055rem;
+  color: #2E2E2E;
+  color: #64A604;
+  font-size: 0.75rem;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #F6F6F6;
+  border: 1px solid #F6F6F6;
+  padding: 5px 20px;
+}
+.button.reverse svg {
+  fill: #64A604;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+.button.reverse:hover, .button.reverse:focus {
+  color: #2E2E2E;
+  border: 1px solid #64A604;
+}
+.button.reverse:hover svg, .button.reverse:focus svg {
+  fill: #2E2E2E;
+}
 
 .brand {
   color: #64A604;
@@ -391,6 +426,22 @@ hr.light {
   margin: 8px 0;
 }
 
+input,
+textarea {
+  font-family: "Lora", serif;
+  font-weight: 400;
+  font-size: 0.7rem;
+  line-height: 1.2rem;
+  letter-spacing: 0.015rem;
+  padding: 5px;
+  border: 2px solid rgba(153, 153, 153, 0.1294117647);
+}
+
+textarea {
+  resize: none;
+  width: 100%;
+}
+
 header {
   background-image: url("../assets/home/home-1.jpeg");
   background-repeat: no-repeat;
@@ -398,10 +449,15 @@ header {
   height: 100vh;
   width: 100%;
 }
-header.blog {
-  background-image: url("../assets/blog/blog-1.jpeg");
+header.blog, header.contact {
   height: 80vh;
   background-color: #F6F6F6;
+}
+header.blog {
+  background-image: url("../assets/blog/blog-1.jpeg");
+}
+header.contact {
+  background-image: url("../assets/contact/contact-1.jpeg");
 }
 header .wrapper {
   width: 90%;
@@ -444,12 +500,15 @@ header a {
   color: #2E2E2E;
   font-size: 0.9rem;
 }
+header a:hover svg, header a:focus svg {
+  fill: #64A604;
+}
 header svg {
   fill: #2E2E2E;
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
 }
-header svg:hover {
+header svg:hover, header svg:focus {
   fill: #64A604;
 }
 header .wrapper {
@@ -463,17 +522,14 @@ header .wrapper {
   top: -50px;
   left: 0px;
 }
-.jumpToMain:hover,
-.jumpToMain :focus {
+.jumpToMain:hover, .jumpToMain:focus {
   top: 0px;
 }
-.jumpToMain:hover svg,
-.jumpToMain :focus svg {
+.jumpToMain:hover svg, .jumpToMain:focus svg {
   color: #64A604;
   fill: #64A604;
 }
-.jumpToMain:hover h2,
-.jumpToMain :focus h2 {
+.jumpToMain:hover h2, .jumpToMain:focus h2 {
   color: #64A604;
 }
 .jumpToMain h2 {
@@ -531,22 +587,6 @@ footer {
 footer .wrapper {
   width: 70%;
 }
-footer ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 90px 0;
-}
-footer li {
-  width: 25%;
-}
 footer h3 {
   font-family: "Raleway", sans-serif;
   font-weight: bold;
@@ -575,6 +615,24 @@ footer p {
   text-align: left;
 }
 
+.siteMap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 90px 0;
+}
+
+.mapItem {
+  width: 25%;
+}
+
 .email form {
   margin: 30px 0;
 }
@@ -594,11 +652,24 @@ footer p {
   background-color: #2E2E2E;
   border-radius: none;
   width: 100%;
+  color: #F6F6F6;
 }
 .email button {
   width: 40px;
   height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
+}
+.email button:hover svg {
+  fill: #F6F6F6;
 }
 .email svg {
   fill: rgba(246, 246, 246, 0.6588235294);
@@ -609,9 +680,6 @@ footer p {
   left: 0;
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
-}
-.email svg:hover {
-  fill: #F6F6F6;
 }
 
 .copyright {
@@ -629,26 +697,10 @@ footer p {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-.bulletin .popularRecipes,
-.bulletin .foodList {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  width: 100%;
-}
-.bulletin .foodList {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
-}
 .bulletin article,
 .bulletin figure {
   width: 50%;
+  background-color: #F6F6F6;
 }
 .bulletin article {
   display: -webkit-box;
@@ -665,17 +717,33 @@ footer p {
       -ms-flex-align: center;
           align-items: center;
   padding: 0 80px;
+}
+
+.popularRecipesContainer,
+.foodListContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
   background-color: #F6F6F6;
 }
 
-.popularRecipes article p {
+.popularRecipesContainer {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.popularRecipes p {
   margin: 40px 0;
 }
 
 .foodList {
-  background-color: #F6F6F6;
-}
-.foodList ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -685,19 +753,21 @@ footer p {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-.foodList ul li {
+
+.foodItem {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 48%;
   margin: 10px 0;
 }
-.foodList ul p {
-  text-align: left;
+
+.textContainer p {
   padding: 10px 0;
   font-size: 0.6rem;
 }
-.foodList .icon {
+
+.icon {
   margin-right: 5px;
 }
 
@@ -737,7 +807,8 @@ footer p {
   min-width: 250px;
   position: relative;
 }
-.about .stamp {
+
+.aboutStamp {
   width: 200px;
   height: 200px;
   background-image: url(../assets/home/home-circle-text.png);
@@ -746,14 +817,34 @@ footer p {
   top: -120px;
   right: -70px;
 }
-.about h2 {
+
+.aboutTextContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.aboutTextContainer h2 {
   margin-top: 80px;
+}
+.aboutTextContainer p {
+  text-align: center;
 }
 
 .gallery {
   width: 100%;
 }
-.gallery ul {
+
+.galleryContainer {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -765,9 +856,13 @@ footer p {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-.gallery ul li {
-  -ms-flex-preferred-size: 33%;
-      flex-basis: 33%;
+
+.galleryItem {
+  width: 33.3333333333%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  min-width: 250px;
 }
 
 .review {
@@ -789,7 +884,8 @@ footer p {
       -ms-flex-align: center;
           align-items: center;
 }
-.review article {
+
+.testimonial {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -805,7 +901,7 @@ footer p {
           align-items: center;
   padding: 100px;
 }
-.review p {
+.testimonial p {
   font-family: "Lora", serif;
   font-weight: 400;
   font-style: italic;
@@ -815,24 +911,28 @@ footer p {
   letter-spacing: 0.03rem;
   color: #333333;
 }
-.review .quoteContainer {
+
+.quoteContainer {
   position: relative;
 }
-.review .quotationMarks::before,
-.review .quotationMarks::after {
+
+.quotationMarks::before,
+.quotationMarks::after {
   color: #F6F6F6;
   position: absolute;
   font-size: 140px;
 }
-.review .quotationMarks::before {
+
+.quotationMarks::before {
   content: "“";
-  top: -40px;
-  left: -60px;
+  top: 0px;
+  left: -50px;
 }
-.review .quotationMarks::after {
+
+.quotationMarks::after {
   content: "”";
-  bottom: -80px;
-  right: -60px;
+  bottom: -35px;
+  right: -50px;
 }
 
 .navArrow {
@@ -1104,20 +1204,6 @@ figure {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-.userComment input,
-.userComment textarea {
-  font-family: "Lora", serif;
-  font-weight: 400;
-  font-size: 0.7rem;
-  line-height: 1.2rem;
-  letter-spacing: 0.015rem;
-  padding: 5px;
-  border: 2px solid rgba(153, 153, 153, 0.1294117647);
-}
-.userComment textarea {
-  resize: none;
-  width: 100%;
-}
 
 .formIntro,
 .userComment,
@@ -1139,4 +1225,105 @@ figure {
   min-width: 200px;
   width: 30%;
   margin: 10px 0;
+}
+
+.contactUs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.formatBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.formatBox.left {
+  width: 55%;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  background-color: #F6F6F6;
+}
+.formatBox.right {
+  width: 45%;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  background-color: rgba(153, 153, 153, 0.1294117647);
+}
+
+.userContact {
+  min-width: 600px;
+  padding: 60px 30px;
+}
+.userContact .userInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+}
+.userContact .userInfo input {
+  width: calc(50% - 10px);
+}
+
+.userMsg {
+  width: 100%;
+}
+.userMsg input[type=text],
+.userMsg textarea {
+  width: 100%;
+  margin: 5px 0;
+}
+
+.contactText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 350px;
+  padding: 60px 30px;
+}
+.contactText .contactContainer {
+  margin: 15px 0;
+}
+
+.details p {
+  margin: 15px 0;
+}
+
+.dateHeading {
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: left;
+  font-size: 2.3rem;
+  line-height: 1.2rem;
+  letter-spacing: 0.055rem;
+  color: #2E2E2E;
+  font-size: 0.7rem;
+  letter-spacing: normal;
+}
+
+.hoursDetail {
+  font-style: italic;
+}
+
+.contactInfo a {
+  font-family: "Lora", serif;
+  font-weight: 400;
+  font-size: 0.7rem;
+  line-height: 1.2rem;
+  letter-spacing: 0.015rem;
+}
+
+.brandBanner {
+  min-height: 80vh;
+  background-image: url(../assets/contact/contact-2.jpeg);
 }

@@ -1,0 +1,98 @@
+@use "./variables" as *;
+
+// flex format: style boxes
+.contactUs {
+    display: flex;
+    width: 100%;
+}
+
+// flex format: individual style box width and children
+.formatBox {
+    display: flex;
+
+    &.left {
+        width: 55%;
+        justify-content: flex-end;
+        background-color: $primeWhite;
+    }
+
+    &.right {
+        width: 45%;
+        justify-content: flex-start;
+        background-color: $secGrey;
+    }
+}
+
+// 
+.userContact {
+    min-width: 600px;
+    padding: 60px 30px;
+
+    .userInfo {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+
+        input {
+            width: calc(50% - 10px);
+        }
+    }
+}
+
+.userMsg {
+    width: 100%;
+
+    input[type="text"],
+    textarea {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
+
+// CONTACT DETAILS SECTION
+
+.contactText {
+    // flex format: parent
+    display: flex;
+    flex-direction: column;
+    max-width: 350px;
+    padding: 60px 30px;
+
+    // all child container vertical sizing
+    .contactContainer {
+        margin: 15px 0
+    }
+
+
+}
+
+// details container
+.details p {
+    margin: 15px 0;
+}
+
+// hours container
+.dateHeading {
+    @include titleFont;
+    font-size: 0.7rem;
+    letter-spacing: normal;
+}
+
+.hoursDetail {
+    font-style: italic;
+}
+
+// info list container
+.contactInfo {
+
+    a {
+        @include bodyFont;
+    }
+}
+
+
+// BRAND BANNER SECTION
+.brandBanner {
+    min-height: 80vh;
+    background-image: url(../assets/contact/contact-2.jpeg);
+}
