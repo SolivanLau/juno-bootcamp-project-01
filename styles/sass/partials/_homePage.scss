@@ -20,7 +20,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 0 80px;
+        padding: 0 65px;
     }
 
 }
@@ -48,9 +48,6 @@
 
 
 // food list article
-.foodListContainer {
-    // overflow: hidden;
-}
 
 .foodListArticle {
     overflow: hidden;
@@ -67,15 +64,7 @@
 .foodItem {
     display: flex;
     width: 48%;
-    margin: 10px 0;
-
-    h3 {
-        font-size: clamp(0.5rem, 0.3667rem + 0.6095vw, 0.9rem);
-    }
-
-    p {
-        font-size: clamp(0.5rem, 0.4333rem + 0.3048vw, 0.7rem);
-    }
+    margin: 5px 0;
 }
 
 .textContainer p {
