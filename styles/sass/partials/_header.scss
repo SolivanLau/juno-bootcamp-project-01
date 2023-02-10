@@ -9,7 +9,7 @@ header {
     height: 100vh;
     width: 100%;
 
-    // img and height setup
+    // adjustment to blog.html and contact.html
     &.blog,
     &.contact {
         height: 80vh;
@@ -25,28 +25,33 @@ header {
     }
 
     // wrapper set up
-    & .wrapper {
+    .wrapper {
+        // wrapper adjustment
         width: 90%;
+
+        // flex format with wrap
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
+        // breathing room
         padding-top: 45px;
+        //for jump to main section
+        position: relative
     }
 
-    // flex format
-    ul {
-        width: 50%;
-        min-width: 680px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
+    // font adjustment, link interaction
     h1 {
         transition: 0.2s ease;
 
         &:hover {
             color: $primeGreen;
         }
+    }
+
+    // svg styling
+    svg {
+        fill: $primeBlack;
+        transition: 0.2s ease;
     }
 
     a {
@@ -62,23 +67,23 @@ header {
         }
     }
 
-    // svg styling
-    & svg {
-        fill: $primeBlack;
-        transition: 0.2s ease;
+}
 
-        &:hover,
-        &:focus {
-            fill: $primeGreen;
-        }
-    }
+.brandContainer {
+    width: 40%;
+    padding: 10px 0;
+}
 
-    & .wrapper {
-        position: relative
-    }
-
-
-
+.navList {
+    // dimensions set up
+    width: 60%;
+    min-width: 680px;
+    padding: 10px 0;
+    // flex format
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
 }
 
 // jump to main section
@@ -123,7 +128,6 @@ header {
 
 }
 
-
 .arrowDisplay {
     display: inline-block;
     height: 80px;
@@ -138,4 +142,65 @@ header {
 .jumpArrow {
     transform: rotate(0.25turn);
     width: 70px;
+}
+
+// search bar section WIP
+
+// .searchContainer {
+//     // linking movement to search ICON
+//     position: absolute;
+//     // search input dimensions
+//     width: 350px;
+//     height: 100px;
+//     //flex format: input child to right center 
+//     display: flex;
+//     justify-content: flex-end;
+//     align-items: center;
+//     // initial position
+//     top: -20px;
+//     left: -300px;
+//     background-color: rgba(0, 0, 255, 0.359);
+//     // animation
+//     transition: 0.2s ease;
+
+
+//     input {
+//         min-width: 250px;
+//         // display: none;
+//         margin: 0 10px 0 0;
+//     }
+// }
+
+// WIP currently!
+// .searchButton {
+//     position: relative;
+
+//     &:hover,
+//     &:focus {
+//         .searchContainer {
+//             top: 50px;
+//         }
+
+//         .searchContainer input {
+//             display: block;
+//         }
+//     }
+// }
+
+
+@keyframes dropDown {
+
+    1% {
+        display: block;
+    }
+
+    2% {
+        top: -3px;
+        left: -211px;
+    }
+
+    100% {
+        top: 30px;
+        opacity: 100%;
+    }
 }

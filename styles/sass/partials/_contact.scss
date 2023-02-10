@@ -4,22 +4,39 @@
 .contactUs {
     display: flex;
     width: 100%;
+
+    .wrapper {
+        width: 100%;
+    }
 }
 
-// flex format: individual style box width and children
+// flex format:
 .formatBox {
     display: flex;
 
-    &.left {
-        width: 55%;
-        justify-content: flex-end;
-        background-color: $primeWhite;
+    .wrapper {
+        display: flex;
     }
 
-    &.right {
-        width: 45%;
+}
+
+// left side width and flex format
+.left {
+    width: 55%;
+    background-color: $primeWhite;
+
+    .wrapper {
+        justify-content: flex-end;
+    }
+}
+
+// right side width and flex format
+.right {
+    width: 45%;
+    background-color: $secGrey;
+
+    .wrapper {
         justify-content: flex-start;
-        background-color: $secGrey;
     }
 }
 
@@ -60,7 +77,9 @@
 
     // all child container vertical sizing
     .contactContainer {
-        margin: 15px 0
+        margin: 15px 0;
+        display: flex;
+        flex-direction: column;
     }
 
 
@@ -82,17 +101,12 @@
     font-style: italic;
 }
 
-// info list container
-.contactInfo {
-
-    a {
-        @include bodyFont;
-    }
-}
 
 
 // BRAND BANNER SECTION
 .brandBanner {
     min-height: 80vh;
     background-image: url(../assets/contact/contact-2.jpeg);
+    background-repeat: no-repeat;
+    background-position: top center;
 }

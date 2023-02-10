@@ -41,11 +41,15 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 90px 0;
+    flex-wrap: wrap;
+    padding: 70px 0;
 }
 
 .mapItem {
-    width: 25%;
+    width: calc ((100 / 4) - 20px);
+    min-width: 275px;
+    margin: 20px 15px;
+    flex-grow: 1;
 }
 
 // email sub column
@@ -81,7 +85,6 @@ footer {
             }
         }
     }
-
 
     & svg {
         fill: $preHoverWhite;
