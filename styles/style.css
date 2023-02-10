@@ -227,6 +227,11 @@ html {
   overflow: hidden;
 }
 
+.postData {
+  color: #2E2E2E;
+  font-family: "Raleway", sans-serif;
+}
+
 html {
   font-size: 125%;
   scroll-behavior: smooth;
@@ -334,6 +339,7 @@ a.dataLink {
   font-size: 0.7rem;
   line-height: 1.2rem;
   letter-spacing: 0.015rem;
+  font-family: "Raleway", sans-serif;
   text-transform: none;
 }
 a:hover, a:focus {
@@ -645,9 +651,6 @@ footer a {
 footer a {
   color: #999999;
 }
-footer p {
-  text-align: left;
-}
 
 .siteMap {
   display: -webkit-box;
@@ -660,18 +663,28 @@ footer p {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  gap: 35px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding: 70px 0;
+  padding: 90px 0;
 }
 
 .mapItem {
-  width: calc 5px;
+  width: 30%;
   min-width: 275px;
-  margin: 20px 15px;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+}
+
+.connectDetails {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .email form {
@@ -712,7 +725,8 @@ footer p {
 .email button:hover svg {
   fill: #F6F6F6;
 }
-.email svg {
+
+.submitArrow {
   fill: rgba(246, 246, 246, 0.6588235294);
   position: absolute;
   top: 0;
@@ -721,6 +735,15 @@ footer p {
   left: 0;
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
+}
+
+.email .socialList {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.email .socialIconContainer {
+  margin: 10px 20px 0 0;
 }
 
 .copyright {
@@ -784,8 +807,9 @@ footer p {
   margin: 40px 0;
 }
 
-.foodListContainer {
+.foodListArticle {
   overflow: hidden;
+  aspect-ratio: 951.5/735.017;
 }
 
 .foodList {
@@ -805,6 +829,12 @@ footer p {
   display: flex;
   width: 48%;
   margin: 10px 0;
+}
+.foodItem h3 {
+  font-size: clamp(0.5rem, 0.3667rem + 0.6095vw, 0.9rem);
+}
+.foodItem p {
+  font-size: clamp(0.5rem, 0.4333rem + 0.3048vw, 0.7rem);
 }
 
 .textContainer p {
@@ -1013,19 +1043,13 @@ h3 {
 .recipes h2 {
   font-size: 2rem;
   margin-top: 200px;
+  line-height: normal;
 }
 .recipes h3 {
   font-size: 0.7rem;
 }
 .recipes p {
-  text-align: left;
   margin: 10px 0;
-}
-.recipes .postData p {
-  color: #2E2E2E;
-}
-.recipes article p {
-  margin: 20px 0;
 }
 .recipes .wrapper {
   display: -webkit-box;
@@ -1040,8 +1064,12 @@ h3 {
           justify-content: center;
 }
 
-.tags,
-.share {
+.recipePost p {
+  margin: 20px 0;
+}
+
+.tagsContainer,
+.shareContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1049,12 +1077,12 @@ h3 {
       -ms-flex-align: center;
           align-items: center;
 }
-.tags h3,
-.share h3 {
+.tagsContainer h3,
+.shareContainer h3 {
   margin-right: 10px;
 }
 
-.share ul {
+.socialList {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1062,14 +1090,18 @@ h3 {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.share svg {
-  fill: #999999;
+
+.socialIconContainer {
+  width: 20px;
+  height: 20px;
   margin: 0 15px 0 0;
-  width: 35px;
-  height: 35px;
 }
-.share svg:hover,
-.share svg :focus-within {
+.socialIconContainer svg {
+  fill: #999999;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+.socialIconContainer svg:hover, .socialIconContainer svg:focus {
   fill: #64A604;
 }
 
@@ -1080,19 +1112,22 @@ h3 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  gap: 30px;
   margin: 30px 0;
 }
-.bio figure {
-  -ms-flex-preferred-size: calc(10% - 20px);
-      flex-basis: calc(10% - 20px);
+
+.bioPic {
+  width: 10%;
   min-width: 200px;
-  min-height: 200px;
 }
-.bio article {
-  -ms-flex-preferred-size: calc(80% - 20px);
-      flex-basis: calc(80% - 20px);
+
+.bioAbout {
+  width: 100%;
   background-color: rgba(153, 153, 153, 0.1294117647);
   padding: 30px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .relatedGallery {
@@ -1100,44 +1135,39 @@ h3 {
 }
 .relatedGallery h4 {
   font-size: 0.85rem;
-}
-.relatedGallery p {
-  text-align: left;
+  line-height: 1rem;
+  margin: 10px 0 0 0;
 }
 .relatedGallery .wrapper {
   padding: 30px 0;
 }
-.relatedGallery ul {
+
+.postList {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-.relatedGallery li {
-  -ms-flex-preferred-size: 31%;
-      flex-basis: 31%;
-}
-.relatedGallery figure {
-  width: 100%;
-  min-width: 300px;
-}
-.relatedGallery article {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-.relatedGallery .data {
-  margin-top: 10px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 15px;
 }
 
-figure {
+.postItem {
+  width: 30%;
+  min-width: 250px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+.postItem a:hover .overlay {
+  opacity: 1;
+}
+
+.postPic {
   position: relative;
+  width: 100%;
 }
 
 .overlay {
@@ -1153,8 +1183,15 @@ figure {
   transition: 0.3s ease-in-out;
   background-color: rgba(220, 237, 154, 0.2431372549);
 }
-.overlay:hover {
-  opacity: 1;
+
+.data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .comments {
@@ -1171,6 +1208,7 @@ figure {
 .profilePic {
   -ms-flex-preferred-size: 10;
       flex-basis: 10;
+  position: relative;
 }
 
 .msgContainer {
@@ -1198,7 +1236,7 @@ figure {
           flex-grow: 1;
 }
 
-.postBio {
+.commentBio {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1206,8 +1244,11 @@ figure {
       -ms-flex-align: center;
           align-items: center;
 }
-.postBio h4 {
+.commentBio h4 {
   margin-right: 10px;
+}
+.commentBio .postData {
+  font-family: "Lora", serif;
 }
 
 .timeStampContainer {
@@ -1313,7 +1354,8 @@ figure {
 }
 
 .userContact {
-  min-width: 600px;
+  max-width: 800px;
+  width: 70%;
   padding: 60px 30px;
 }
 .userContact .userInfo {
@@ -1385,9 +1427,20 @@ figure {
   background-image: url(../assets/contact/contact-2.jpeg);
   background-repeat: no-repeat;
   background-position: top center;
+  background-size: cover;
+  background-color: #F6F6F6;
 }
 
-@media (max-width: 1150px) {
+@media (max-width: 1180px) {
+  .bio {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
   .contactUs {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1400,6 +1453,16 @@ figure {
   }
 }
 @media (max-width: 950px) {
+  .commentBio {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin: 0 0 10px 0;
+  }
   .formatBox .wrapper {
     width: 70%;
     -webkit-box-pack: center;
@@ -1414,13 +1477,11 @@ figure {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    text-align: center;
   }
   .contactContainer {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-  }
-  .contactContainer p {
-    text-align: center;
   }
 }

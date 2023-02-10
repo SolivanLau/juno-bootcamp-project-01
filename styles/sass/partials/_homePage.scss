@@ -49,7 +49,13 @@
 
 // food list article
 .foodListContainer {
+    // overflow: hidden;
+}
+
+.foodListArticle {
     overflow: hidden;
+    // links dimension of article to the figure beside
+    aspect-ratio: 951.5 / 735.017;
 }
 
 .foodList {
@@ -62,6 +68,14 @@
     display: flex;
     width: 48%;
     margin: 10px 0;
+
+    h3 {
+        font-size: clamp(0.5rem, 0.3667rem + 0.6095vw, 0.9rem);
+    }
+
+    p {
+        font-size: clamp(0.5rem, 0.4333rem + 0.3048vw, 0.7rem);
+    }
 }
 
 .textContainer p {

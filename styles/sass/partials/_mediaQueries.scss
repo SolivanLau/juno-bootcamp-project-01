@@ -3,9 +3,23 @@
 // index file
 
 
-@media(max-width: 1150px) {
+@media(max-width: 1180px) {
+
+    // BLOG PAGE
+
+    // RECIPE BIO SECTION
+    .bio {
+        // flexformat:
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+
     // CONTACT PAGE
 
+    // FORM AND CONTACT DETAILS SECTIONS
+    // flex format: form and detail boxes
     .contactUs {
         flex-direction: column;
     }
@@ -19,7 +33,18 @@
 
 @media(max-width: 950px) {
 
+    // BLOG PAGE
+    // COMMENT SECTION
+    .commentBio {
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0 0 10px 0;
+    }
+
+
     // CONTACT PAGE
+    // FORM AND CONTACT DETAILS SECTION
+
     // format box centering and wrapper adjustment
     .formatBox .wrapper {
         width: 70%;
@@ -27,18 +52,16 @@
         align-items: center;
     }
 
-    // information
+    // Centering all contact info containers
     .contactText {
         max-width: 100%;
         align-items: center;
+        // centering all text elements
+        text-align: center;
     }
 
     .contactContainer {
         align-items: center;
-
-        p {
-            text-align: center;
-        }
     }
 
 }

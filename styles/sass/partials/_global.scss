@@ -82,6 +82,7 @@ a {
     // blog.html data link styling
     &.dataLink {
         @include bodyFont;
+        font-family: $primeFont;
         text-transform: none;
     }
 

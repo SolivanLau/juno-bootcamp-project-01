@@ -76,3 +76,8 @@ $baseFont: 'Lora', serif;
     line-height: 1.2rem; //24px computed
     letter-spacing: 0.015rem; //.3px computed
 }
+
+.postData {
+    color: $primeBlack;
+    font-family: $primeFont;
+}

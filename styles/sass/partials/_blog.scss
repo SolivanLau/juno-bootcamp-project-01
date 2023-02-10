@@ -9,86 +9,97 @@ h3 {
     // background color and font styles
     background-color: $primeWhite;
 
-    & h2 {
+    // font adjustments for page
+    h2 {
         font-size: 2rem;
         margin-top: 200px;
+        //to prevent clipping for smaller screen resolutions
+        line-height: normal;
     }
 
-    & h3 {
+    h3 {
         font-size: 0.7rem;
     }
 
-    & p {
-        text-align: left;
+    p {
         margin: 10px 0;
     }
 
-    & .postData p {
-        color: $primeBlack;
-    }
-
-    & article p {
-        margin: 20px 0;
-    }
-
-    // flex layout 
-    & .wrapper {
+    // flex layout: recipe post
+    .wrapper {
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
 }
 
+// paragraph spacing for post
+.recipePost p {
+    margin: 20px 0;
+}
 
-.tags,
-.share {
+// TAGS AND LINKS SECTION
+// general format
+.tagsContainer,
+.shareContainer {
+    // flex format: centering tags and logos with text
     display: flex;
     align-items: center;
 
+    // spacing from header
     & h3 {
         margin-right: 10px;
     }
 }
 
-// NEED SVG FIX HERE
-.share {
-    & ul {
-        display: flex;
-        justify-content: space-between;
-    }
+// SOCIAL ICONS
+.socialList {
+    display: flex;
+    justify-content: space-between;
+}
+
+.socialIconContainer {
+    width: 20px;
+    height: 20px;
+    margin: 0 15px 0 0;
 
     & svg {
         fill: $primeGrey;
-        margin: 0 15px 0 0;
-        width: 35px;
-        height: 35px;
+        transition: 0.2s ease;
 
         &:hover,
-        :focus-within {
+        &:focus {
             fill: $primeGreen;
         }
     }
 }
 
+
+// BIO SECTION
 .bio {
     // flex format
     display: flex;
     justify-content: space-between;
+    gap: 30px;
     margin: 30px 0;
 
-    // figure styling
-    & figure {
-        flex-basis: calc(10% - 20px);
-        min-width: 200px;
-        min-height: 200px;
-    }
 
-    // text stlying
-    & article {
-        flex-basis: calc(80% - 20px);
-        background-color: $secGrey;
-        padding: 30px;
-    }
+
+}
+
+// figure styling
+.bioPic {
+    width: calc(100% / 10);
+    min-width: 200px;
+    // margin: 0 40px 0 0;
+}
+
+// text stlying
+.bioAbout {
+    width: 100%;
+    background-color: $secGrey;
+    padding: 30px;
+    flex-grow: 1;
 }
 
 // RELATED POSTS GALLERY SECTION
@@ -97,47 +108,47 @@ h3 {
     background-color: $primeWhite;
 
     // font adjustment
-    & h4 {
+    h4 {
         font-size: .85rem;
+        // adjustment for smaller screen size
+        line-height: 1rem;
+        margin: 10px 0 0 0;
     }
 
-    & p {
-        text-align: left;
-    }
-
-    // flex layout
-    & .wrapper {
+    // breathing room for section
+    .wrapper {
         padding: 30px 0;
     }
 
-    & ul {
-        display: flex;
-        justify-content: space-between;
-    }
 
-    & li {
-        flex-basis: 31%;
-    }
-
-    & figure {
-        width: 100%;
-        min-width: 300px;
-    }
-
-    & article {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .data {
-        margin-top: 10px;
-    }
 
 
 }
 
-figure {
+// post layout
+.postList {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.postItem {
+    width: 30%;
+    min-width: 250px;
+    flex-grow: 1;
+
+    a:hover {
+        .overlay {
+            opacity: 1;
+        }
+    }
+}
+
+// post pic and overlay settings
+.postPic {
     position: relative;
+    width: 100%;
 }
 
 // overlay effect
@@ -152,10 +163,12 @@ figure {
     opacity: 0;
     transition: 0.3s ease-in-out;
     background-color: $overlaySecGreen;
+}
 
-    &:hover {
-        opacity: 1;
-    }
+// post data text
+.data {
+    display: flex;
+    flex-direction: column;
 }
 
 // COMMENT SECTION
@@ -174,6 +187,7 @@ figure {
 
 .profilePic {
     flex-basis: calc(100 / 10);
+    position: relative;
 }
 
 .msgContainer {
@@ -197,20 +211,25 @@ figure {
     flex-grow: 1;
 }
 
-.postBio {
+.commentBio {
     display: flex;
     align-items: center;
 
-    & h4 {
+    h4 {
         margin-right: 10px;
     }
+
+    .postData {
+        font-family: $baseFont;
+    }
+
 }
 
 // timeStamp stylings
 .timeStampContainer {
     margin-top: 5px;
 
-    & .postData {
+    .postData {
         @include bodyStyleFont;
         font-size: 0.65rem;
     }
