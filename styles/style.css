@@ -475,20 +475,17 @@ header .wrapper {
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  gap: 20%;
   padding-top: 45px;
   position: relative;
-}
-header h1 {
-  -webkit-transition: 0.2s ease;
-  transition: 0.2s ease;
-}
-header h1:hover {
-  color: #64A604;
 }
 header svg {
   fill: #2E2E2E;
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
+}
+header svg:hover, header svg:focus {
+  fill: #64A604;
 }
 header a {
   font-family: "Raleway", sans-serif;
@@ -501,13 +498,15 @@ header a {
   color: #2E2E2E;
   font-size: 0.9rem;
 }
-header a:hover svg, header a:focus svg {
-  fill: #64A604;
-}
 
-.brandContainer {
-  width: 40%;
+.brandName {
+  width: 20%;
   padding: 10px 0;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+.brandName:hover {
+  color: #64A604;
 }
 
 .navList {
@@ -586,33 +585,18 @@ header a:hover svg, header a:focus svg {
   width: 70px;
 }
 
-@-webkit-keyframes dropDown {
-  1% {
-    display: block;
-  }
-  2% {
-    top: -3px;
-    left: -211px;
-  }
-  100% {
-    top: 30px;
-    opacity: 100%;
-  }
+.navToggle,
+.navToggleLabel {
+  display: none;
+}
+.navToggle:checked ~ .navList,
+.navToggleLabel:checked ~ .navList {
+  opacity: 1;
+  visibility: visible;
+  top: 95px;
+  right: 0px;
 }
 
-@keyframes dropDown {
-  1% {
-    display: block;
-  }
-  2% {
-    top: -3px;
-    left: -211px;
-  }
-  100% {
-    top: 30px;
-    opacity: 100%;
-  }
-}
 footer {
   width: 100%;
   display: -webkit-box;
@@ -872,7 +856,6 @@ footer a {
 .about figure {
   margin-top: 150px;
   width: 500px;
-  min-width: 250px;
   position: relative;
 }
 
@@ -1449,6 +1432,9 @@ h3 {
   .bulletin article {
     padding: 65px;
   }
+  .bulletin figure {
+    min-height: 100vh;
+  }
 }
 @media (max-width: 1180px) {
   .bio {
@@ -1472,6 +1458,64 @@ h3 {
   }
 }
 @media (max-width: 950px) {
+  header nav {
+    position: fixed;
+    width: 100%;
+    opacity: 0.5;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+  }
+  header nav:hover, header nav:focus {
+    opacity: 1;
+  }
+  .navList {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    gap: 10px;
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: 0.2s ease;
+    transition: 0.2s ease;
+    background-color: #DDED9A;
+    border-radius: 40px;
+    padding: 15px;
+    width: 250px;
+    min-width: auto;
+    position: absolute;
+    top: 80px;
+    right: 0px;
+  }
+  .navItem {
+    text-align: right;
+    margin-right: 10px;
+  }
+  .navToggle,
+  .navToggleLabel {
+    display: block;
+  }
+  .navToggleLabel:hover, .navToggleLabel:focus {
+    cursor: pointer;
+  }
+  .foodListArticle {
+    overflow: visible;
+    aspect-ratio: auto;
+  }
+  .foodItem {
+    width: 100%;
+  }
   .commentBio {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;

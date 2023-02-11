@@ -19,10 +19,15 @@
             padding: 65px;
         }
 
+        figure {
+            min-height: 100vh;
+        }
+
     }
 }
 
 @media(max-width: 1180px) {
+
 
     // BLOG PAGE
 
@@ -32,6 +37,9 @@
         flex-direction: column;
         align-items: center;
     }
+
+
+
 
     // CONTACT PAGE
 
@@ -49,6 +57,88 @@
 }
 
 @media(max-width: 950px) {
+
+    // HEADER SECTION
+    // menu to fixed
+    header {
+
+        nav {
+            position: fixed;
+            width: 100%;
+            opacity: .5;
+            transition: 0.3s ease;
+
+            &:hover,
+            &:focus {
+                opacity: 1;
+                // background-color: ;
+            }
+        }
+    }
+
+
+    // mobile integration
+    .navList {
+        // flex format: menu right side pop  op
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+        gap: 10px;
+        flex-grow: 0;
+        align-self: flex-end;
+
+        // toggle effects
+        // transform: scale(1, 0);
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.2s ease;
+
+        // background menu setup 
+        background-color: $secGreen;
+        border-radius: 40px;
+        padding: 15px;
+        width: 250px;
+        min-width: auto;
+
+        // position
+        position: absolute;
+        top: 80px;
+        right: 0px;
+    }
+
+    .navItem {
+        text-align: right;
+        margin-right: 10px;
+    }
+
+    .navToggle,
+    .navToggleLabel {
+        display: block;
+    }
+
+    .navToggleLabel {
+
+        &:hover,
+        &:focus {
+            cursor: pointer;
+
+
+        }
+    }
+
+
+
+    // HOMEPAGE
+    // BULLETIN SECTION
+    // foodlist ul
+    .foodListArticle {
+        overflow: visible;
+        aspect-ratio: auto;
+    }
+
+    .foodItem {
+        width: 100%;
+    }
 
     // BLOG PAGE
     // COMMENT SECTION

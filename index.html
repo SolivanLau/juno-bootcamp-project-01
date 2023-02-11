@@ -13,11 +13,19 @@
 <body>
     <!-- HEADER SECTION -->
     <header>
+        <!-- Nav -->
         <nav>
+            <!-- wrapper -->
             <div class="wrapper">
-                <div class="brandContainer">
-                    <a href="#"><h1>Delicious</h1></a>
-                </div>
+                <!-- brand name -->
+                <a href="#"><h1 class="brandName">Delicious</h1></a>
+                    <input type="checkbox" name="navToggle" id="navToggle" class="navToggle sr-only">
+                    <label for="navToggle" class="navToggleLabel">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="50" width="50" viewBox="0 0 50 50">
+                            <path d="M5.5 36.8v-3.95h37v3.95Zm0-10.8v-4h37v4Zm0-10.85V11.2h37v3.95Z"/>
+                        </svg>
+                    </label>
+                <!-- nav items list -->
                 <ul class="navList">
                     <!-- homepage link -->
                     <li class="navItem"><a href="./index.html">Home</a></li>
@@ -246,37 +254,59 @@
         <!-- Content Wrapper -->
         <div class="wrapper">
             <!-- site map -->
-            <ul class="siteMap">
+            <div class="siteMap">
                 <!-- connect column -->
-                <li class="connect mapItem">
+                <div class="connect mapItem">
                     <h3 class="brand">Delicious</h3>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates adipisci dolores cumque omnis nisi consequuntur minima temporibus aut ut amet.</p>
                     <hr class="light">
-                    <p>A delicious restaurant Toronto, Ontario</p>
-                    <hr class="light">
-                    <a href="#">yum@food.com</a>
-                    <hr class="light">
-                    <p>+1 234 567 8910</p>
-                </li>
+                    <ul class="connectDetails">
+                        <li class="connectItem">
+                            <p>A delicious restaurant Toronto, Ontario</p>
+                            <hr class="light">
+                        </li>
+                        <li class="connectItem">
+                            <a href="#">yum@food.com</a>
+                            <hr class="light">
+                        </li>
+                        <li class="connectItem">
+                            <p><span class="sr-only">Via telephone number, we can be reached at:</span>  +1 234 567 8910</p>
+                        </li>
+                    </ul>
+                </div>
 
                 <!-- recent posts column -->
-                <li class="posts mapItem">
+                <div class="recentPosts mapItem">
                     <h3>Recent posts</h3>
-                    <a href="#"><h4>Top 10 Facts About Your pantry.</h4></a>
-                    <hr class="light">
-                    <a href="#"><h4>You Need This in Your Kitchen</h4></a>
-                    <hr class="light">
-                    <a href="#"><h4>Baking 101: Starting Strong</h4></a>
-                    <hr class="light">
-                    <a href="#"><h4>How to Boil the Perfect Egg</h4></a>
-                    <hr class="light">
-                    <a href="#"><h4>Jamie Oliver: Chili Jam in Rice is Wrong</h4></a>
-                    <hr class="light">
-                    <a href="#"><h4>Don't Miss Out: Importance of Gut Health </h4></a>
-                </li>
+                    <ul class="recentList">
+                        <li class="recentItem">
+                            <a href="#"><h4>Top 10 Facts About Your pantry.</h4></a>
+                            <hr class="light">
+                        </li>
+                        <li class="recentItem">
+                            <a href="#"><h4>You Need This in Your Kitchen</h4></a>
+                            <hr class="light">
+                        </li>
+                        <li class="recentItem">
+                            <a href="#"><h4>Baking 101: Starting Strong</h4></a>
+                            <hr class="light">
+                        </li>
+                        <li class="recentItem">
+                            <a href="#"><h4>How to Boil the Perfect Egg</h4></a>
+                            <hr class="light">
+                        </li>
+                        <li class="recentItem">
+                            <a href="#"><h4>Jamie Oliver: Chili Jam in Rice is Wrong</h4></a>
+                            <hr class="light">
+                        </li>
+                        <li class="recentItem">
+                            <a href="#"><h4>Don't Miss Out: Importance of Gut Health </h4></a>
+                        </li>
+                    </ul>
+                </div>
 
                 <!-- email sub column -->
-                <li class="email mapItem">
+                <div class="email mapItem">
                     <h3>Subscribe Now</h3>
                     <p>Get All of our newest recipes immediately in your inbox!</p>
                     
@@ -291,20 +321,65 @@
                             <!-- button -->
                             <button type="submit" class="button">
                                 <span class="sr-only">Submit email</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" height="35" width="35" viewBox="0 0 45 45" aria-hidden="true" focusable="false">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="35" width="35" viewBox="0 0 45 45" aria-hidden="true" focusable="false" class="submitArrow">
                                     <path d="M26.2 35.5q-.65-.7-.675-1.675-.025-.975.625-1.625l6-5.95H9.3q-1 0-1.675-.675T6.95 23.9q0-1 .675-1.675T9.3 21.55h22.85L26.1 15.5q-.65-.65-.625-1.6.025-.95.675-1.65.7-.65 1.675-.65.975 0 1.625.65l9.95 10q.35.35.55.775.2.425.2.875t-.2.875q-.2.425-.55.775l-9.9 9.95q-.7.7-1.65.675-.95-.025-1.65-.675Z"/>
                                 </svg>
                             </button>
                             <!-- end of layout -->
                         </div>
+                        
                         <!-- end of form -->
                     </form>
                     <hr class="light">
-                    <div class="socials">
-                    </div>
-                </li>
+                    <!-- socials layout -->
+                    <ul class="socialList">
+                        <li>
+                            <a href="">
+                               <div class="socialIconContainer">
+                                    <svg height="20px" width="20px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 310 310" xml:space="preserve">
+                                        <g id="XMLID_834_">
+                                            <path id="XMLID_835_" d="M81.703,165.106h33.981V305c0,2.762,2.238,5,5,5h57.616c2.762,0,5-2.238,5-5V165.765h39.064
+                                                c2.54,0,4.677-1.906,4.967-4.429l5.933-51.502c0.163-1.417-0.286-2.836-1.234-3.899c-0.949-1.064-2.307-1.673-3.732-1.673h-44.996
+                                                V71.978c0-9.732,5.24-14.667,15.576-14.667c1.473,0,29.42,0,29.42,0c2.762,0,5-2.239,5-5V5.037c0-2.762-2.238-5-5-5h-40.545
+                                                C187.467,0.023,186.832,0,185.896,0c-7.035,0-31.488,1.381-50.804,19.151c-21.402,19.692-18.427,43.27-17.716,47.358v37.752H81.703
+                                                c-2.762,0-5,2.238-5,5v50.844C76.703,162.867,78.941,165.106,81.703,165.106z"/>
+                                        </g>
+                                    </svg>
+                               </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="socialIconContainer">
+                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  viewBox="0 0 248 204"xml:space="preserve">
+                                        <g id="Logo_1_">
+                                            <path id="white_background" class="st0" d="M221.95,51.29c0.15,2.17,0.15,4.34,0.15,6.53c0,66.73-50.8,143.69-143.69,143.69v-0.04
+                                                C50.97,201.51,24.1,193.65,1,178.83c3.99,0.48,8,0.72,12.02,0.73c22.74,0.02,44.83-7.61,62.72-21.66
+                                                c-21.61-0.41-40.56-14.5-47.18-35.07c7.57,1.46,15.37,1.16,22.8-0.87C27.8,117.2,10.85,96.5,10.85,72.46c0-0.22,0-0.43,0-0.64
+                                                c7.02,3.91,14.88,6.08,22.92,6.32C11.58,63.31,4.74,33.79,18.14,10.71c25.64,31.55,63.47,50.73,104.08,52.76
+                                                c-4.07-17.54,1.49-35.92,14.61-48.25c20.34-19.12,52.33-18.14,71.45,2.19c11.31-2.23,22.15-6.38,32.07-12.26
+                                                c-3.77,11.69-11.66,21.62-22.2,27.93c10.01-1.18,19.79-3.86,29-7.95C240.37,35.29,231.83,44.14,221.95,51.29z"/>
+                                        </g>
+                                    </svg>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="socialIconContainer">
+                                    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
+                                        <path class="cls-1" d="M295.42,6c-53.2,2.51-89.53,11-121.29,23.48-32.87,12.81-60.73,30-88.45,57.82S40.89,143,28.17,175.92c-12.31,31.83-20.65,68.19-23,121.42S2.3,367.68,2.56,503.46,3.42,656.26,6,709.6c2.54,53.19,11,89.51,23.48,121.28,12.83,32.87,30,60.72,57.83,88.45S143,964.09,176,976.83c31.8,12.29,68.17,20.67,121.39,23s70.35,2.87,206.09,2.61,152.83-.86,206.16-3.39S799.1,988,830.88,975.58c32.87-12.86,60.74-30,88.45-57.84S964.1,862,976.81,829.06c12.32-31.8,20.69-68.17,23-121.35,2.33-53.37,2.88-70.41,2.62-206.17s-.87-152.78-3.4-206.1-11-89.53-23.47-121.32c-12.85-32.87-30-60.7-57.82-88.45S862,40.87,829.07,28.19c-31.82-12.31-68.17-20.7-121.39-23S637.33,2.3,501.54,2.56,348.75,3.4,295.42,6m5.84,903.88c-48.75-2.12-75.22-10.22-92.86-17-23.36-9-40-19.88-57.58-37.29s-28.38-34.11-37.5-57.42c-6.85-17.64-15.1-44.08-17.38-92.83-2.48-52.69-3-68.51-3.29-202s.22-149.29,2.53-202c2.08-48.71,10.23-75.21,17-92.84,9-23.39,19.84-40,37.29-57.57s34.1-28.39,57.43-37.51c17.62-6.88,44.06-15.06,92.79-17.38,52.73-2.5,68.53-3,202-3.29s149.31.21,202.06,2.53c48.71,2.12,75.22,10.19,92.83,17,23.37,9,40,19.81,57.57,37.29s28.4,34.07,37.52,57.45c6.89,17.57,15.07,44,17.37,92.76,2.51,52.73,3.08,68.54,3.32,202s-.23,149.31-2.54,202c-2.13,48.75-10.21,75.23-17,92.89-9,23.35-19.85,40-37.31,57.56s-34.09,28.38-57.43,37.5c-17.6,6.87-44.07,15.07-92.76,17.39-52.73,2.48-68.53,3-202.05,3.29s-149.27-.25-202-2.53m407.6-674.61a60,60,0,1,0,59.88-60.1,60,60,0,0,0-59.88,60.1M245.77,503c.28,141.8,115.44,256.49,257.21,256.22S759.52,643.8,759.25,502,643.79,245.48,502,245.76,245.5,361.22,245.77,503m90.06-.18a166.67,166.67,0,1,1,167,166.34,166.65,166.65,0,0,1-167-166.34" transform="translate(-2.5 -2.5)"/>
+                                    </svg>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- end of email column -->
+                </div>
                 <!-- Site Map END -->
-            </ul>
+                </div>
+                <!-- wrapper END -->
+            </div>
         </div>
 
         <!-- copyright section -->

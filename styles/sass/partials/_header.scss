@@ -28,50 +28,48 @@ header {
     .wrapper {
         // wrapper adjustment
         width: 90%;
-
         // flex format with wrap
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+        gap: 20%;
         // breathing room
         padding-top: 45px;
         //for jump to main section
         position: relative
     }
 
-    // font adjustment, link interaction
-    h1 {
-        transition: 0.2s ease;
 
-        &:hover {
-            color: $primeGreen;
-        }
-    }
 
     // svg styling
     svg {
         fill: $primeBlack;
         transition: 0.2s ease;
+
+        &:hover,
+        &:focus {
+            fill: $primeGreen;
+
+        }
     }
 
     a {
         @include titleFont;
         font-size: 0.9rem;
 
-        &:hover,
-        &:focus {
-            svg {
-                fill: $primeGreen;
-            }
-
-        }
     }
 
 }
 
-.brandContainer {
-    width: 40%;
+// font adjustment, link interaction
+.brandName {
+    width: 20%;
     padding: 10px 0;
+    transition: 0.2s ease;
+
+    &:hover {
+        color: $primeGreen;
+    }
 }
 
 .navList {
@@ -144,63 +142,23 @@ header {
     width: 70px;
 }
 
-// search bar section WIP
 
-// .searchContainer {
-//     // linking movement to search ICON
-//     position: absolute;
-//     // search input dimensions
-//     width: 350px;
-//     height: 100px;
-//     //flex format: input child to right center 
-//     display: flex;
-//     justify-content: flex-end;
-//     align-items: center;
-//     // initial position
-//     top: -20px;
-//     left: -300px;
-//     background-color: rgba(0, 0, 255, 0.359);
-//     // animation
-//     transition: 0.2s ease;
+// mobile toggle menu
 
 
-//     input {
-//         min-width: 250px;
-//         // display: none;
-//         margin: 0 10px 0 0;
-//     }
-// }
+.navToggle,
+.navToggleLabel {
+    display: none;
 
-// WIP currently!
-// .searchButton {
-//     position: relative;
+    &:checked {
 
-//     &:hover,
-//     &:focus {
-//         .searchContainer {
-//             top: 50px;
-//         }
-
-//         .searchContainer input {
-//             display: block;
-//         }
-//     }
-// }
-
-
-@keyframes dropDown {
-
-    1% {
-        display: block;
-    }
-
-    2% {
-        top: -3px;
-        left: -211px;
-    }
-
-    100% {
-        top: 30px;
-        opacity: 100%;
+        ~.navList {
+            // ~ finding SIBLING of navToggle instead of child
+            // transform: scale(1, 1);
+            opacity: 1;
+            visibility: visible;
+            top: 95px;
+            right: 0px;
+        }
     }
 }
