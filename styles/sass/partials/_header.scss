@@ -84,6 +84,61 @@ header {
     flex-grow: 1;
 }
 
+// searchBar feature
+.searchButton {
+    position: relative;
+}
+
+.searchToggle {
+    display: none;
+}
+
+.searchToggleLabel {
+
+    &:hover,
+    &:focus {
+        cursor: pointer;
+    }
+}
+
+.searchBarContainer {
+    display: flex;
+    width: 325px;
+    position: absolute;
+    top: 35px;
+    right: 0px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+}
+
+.searchBar {
+    min-width: 160px;
+    height: 100%;
+    border-radius: 50px 0 0 50px;
+    padding: 5px 10px;
+    flex-grow: 1;
+}
+
+.searchButton {
+    width: 40px;
+    border-radius: 0 50px 50px 0;
+}
+
+.searchToggle {
+
+    &:checked {
+        ~.searchBarContainer {
+            visibility: visible;
+            opacity: 1;
+            top: 45px;
+            right: 0px;
+        }
+    }
+}
+
+
+
 // jump to main section
 .jumpToMain {
     position: absolute;
@@ -154,7 +209,6 @@ header {
 
         ~.navList {
             // ~ finding SIBLING of navToggle instead of child
-            // transform: scale(1, 1);
             opacity: 1;
             visibility: visible;
             top: 95px;

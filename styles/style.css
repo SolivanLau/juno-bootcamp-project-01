@@ -527,6 +527,54 @@ header a {
           flex-grow: 1;
 }
 
+.searchButton {
+  position: relative;
+}
+
+.searchToggle {
+  display: none;
+}
+
+.searchToggleLabel:hover, .searchToggleLabel:focus {
+  cursor: pointer;
+}
+
+.searchBarContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 325px;
+  position: absolute;
+  top: 35px;
+  right: 0px;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.searchBar {
+  min-width: 160px;
+  height: 100%;
+  border-radius: 50px 0 0 50px;
+  padding: 5px 10px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.searchButton {
+  width: 40px;
+  border-radius: 0 50px 50px 0;
+}
+
+.searchToggle:checked ~ .searchBarContainer {
+  visibility: visible;
+  opacity: 1;
+  top: 45px;
+  right: 0px;
+}
+
 .jumpToMain {
   position: absolute;
   -webkit-transition: 0.2s ease;
@@ -1492,7 +1540,7 @@ h3 {
     background-color: #DDED9A;
     border-radius: 40px;
     padding: 15px;
-    width: 250px;
+    width: 300px;
     min-width: auto;
     position: absolute;
     top: 80px;
@@ -1508,6 +1556,17 @@ h3 {
   }
   .navToggleLabel:hover, .navToggleLabel:focus {
     cursor: pointer;
+  }
+  .searchBarContainer {
+    top: 0px;
+    right: 35px;
+    width: 200px;
+  }
+  .searchToggle:checked ~ .searchBarContainer {
+    visibility: visible;
+    opacity: 1;
+    top: 0px;
+    right: 50px;
   }
   .foodListArticle {
     overflow: visible;
