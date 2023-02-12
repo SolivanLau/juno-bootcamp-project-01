@@ -1150,6 +1150,7 @@ h3 {
   font-size: 2rem;
   margin-top: 200px;
   line-height: normal;
+  text-align: left;
 }
 .recipes h3 {
   font-size: 0.7rem;
@@ -1476,6 +1477,9 @@ h3 {
   width: 70%;
   padding: 60px 30px;
 }
+.userContact h2 {
+  text-align: left;
+}
 .userContact .userInfo {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1519,7 +1523,7 @@ h3 {
           flex-direction: column;
 }
 .contactText .contactContainer h2 {
-  text-align: center;
+  text-align: left;
 }
 
 .details p {

@@ -8,6 +8,8 @@
     .wrapper {
         width: 100%;
     }
+
+
 }
 
 // flex format:
@@ -46,6 +48,10 @@
     width: 70%;
     padding: 60px 30px;
 
+    h2 {
+        text-align: left;
+    }
+
     .userInfo {
         display: flex;
         flex-wrap: wrap;
@@ -83,7 +89,7 @@
         flex-direction: column;
 
         h2 {
-            text-align: center;
+            text-align: left;
         }
     }
 
