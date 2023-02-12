@@ -101,21 +101,21 @@
 
     figure {
         margin-top: 150px;
-        width: 500px;
+        width: 80%;
         position: relative;
-
     }
 
 }
 
 .aboutStamp {
-    width: 200px;
-    height: 200px;
+    width: 30%;
+    min-width: 100px;
+    aspect-ratio: 1 / 1;
     background-image: url(../assets/home/home-circle-text.png);
-    background-size: contain;
+    background-size: cover;
     position: absolute;
-    top: -120px;
-    right: -70px;
+    top: -90px;
+    right: -33px;
 }
 
 .aboutTextContainer {
@@ -146,13 +146,20 @@
 .galleryContainer {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
+    object-fit: contain;
+    margin-top: 50px;
 }
 
 .galleryItem {
     width: calc(100% / 3);
     flex-grow: 1;
-    min-width: 300px;
+
+    img {
+        object-fit: contain;
+    }
 }
 
 //REVIEW SECTION 

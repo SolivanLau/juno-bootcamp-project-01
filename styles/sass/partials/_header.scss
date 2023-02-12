@@ -141,10 +141,11 @@ header {
 
 // jump to main section
 .jumpToMain {
+    // initial position
     position: absolute;
-    transition: 0.2s ease;
     top: -50px;
     left: 0px;
+    transition: 0.2s ease;
 
     &:hover,
     &:focus {
@@ -197,22 +198,114 @@ header {
     width: 70px;
 }
 
-
-// mobile toggle menu
-
-
+// MOBILE MENU SECTION
+// input and toggle set up
 .navToggle,
 .navToggleLabel {
     display: none;
+}
 
-    &:checked {
+// MOBILE MENU INITIAL STYLES
+@media(max-width:950px) {
 
-        ~.navList {
-            // ~ finding SIBLING of navToggle instead of child
-            opacity: 1;
-            visibility: visible;
-            top: 95px;
-            right: 0px;
+    // menu to fixed
+    header {
+        nav {
+            width: 100%;
+            position: fixed;
+            z-index: 30;
+            opacity: .5;
+            transition: 0.3s ease;
+
+            // opacity to change when user is off of nav
+            &:hover,
+            &:focus {
+                opacity: 1;
+                backdrop-filter: blur(8px);
+            }
+        }
+    }
+
+    // mobile conversion: pop up navItems
+    .navList {
+        // flex format: menu right side pop  op
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+        gap: 10px;
+        flex-grow: 0;
+        align-self: flex-end;
+
+        // toggle effects
+        // transform: scale(1, 0);
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.2s ease;
+
+        // background menu setup 
+        background-color: $secGreen;
+        border-radius: 40px;
+        padding: 15px;
+        width: 300px;
+        min-width: auto;
+
+        // position
+        position: absolute;
+        top: 80px;
+        right: 0px;
+    }
+
+
+    .navItem {
+        // text alignment
+        text-align: right;
+        margin-right: 10px;
+    }
+
+    // Hamburger menu via Nav Input and TOGGLE
+    .navToggle,
+    .navToggleLabel {
+        display: block;
+    }
+
+    .navToggleLabel {
+
+        // functionality
+        &:hover,
+        &:focus {
+            cursor: pointer;
+        }
+    }
+
+    .navToggle,
+    .navToggleLabel {
+        &:checked {
+            ~.navList {
+                // ~ finding SIBLING of navToggle instead of child
+                opacity: 1;
+                visibility: visible;
+                top: 95px;
+                right: 0px;
+            }
+        }
+    }
+
+    // search bar
+    .searchBarContainer {
+        top: 0px;
+        right: 35px;
+        width: 200px;
+    }
+
+    .searchToggle {
+
+        &:checked {
+            ~.searchBarContainer {
+                visibility: visible;
+                opacity: 1;
+                top: 0px;
+                right: 50px;
+            }
         }
     }
 }

@@ -35,7 +35,7 @@ $baseFont: 'Lora', serif;
     font-weight: 400;
     font-style: italic;
     text-align: center;
-    font-size: 1.2rem; //36px computed
+    font-size: 1.2rem; //24px computed
     line-height: 1.8rem; //36px computed
     letter-spacing: .03rem; //.5px computed
 }
@@ -49,6 +49,7 @@ $baseFont: 'Lora', serif;
     line-height: 1.2rem; //24px computed
     letter-spacing: 0.025rem; //.5px computed
 }
+
 
 @mixin bodyStyleFont {
     font-family: $primeFont;

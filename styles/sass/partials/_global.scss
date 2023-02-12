@@ -62,6 +62,7 @@ h1 {
 h2 {
     @include titleFont;
     font-size: 1.2rem; //computed 24px
+    text-align: center
 }
 
 h3,
