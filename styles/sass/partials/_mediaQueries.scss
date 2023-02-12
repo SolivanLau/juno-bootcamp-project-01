@@ -72,7 +72,7 @@
             &:hover,
             &:focus {
                 opacity: 1;
-                // background-color: ;
+                backdrop-filter: blur(5px);
             }
         }
     }
