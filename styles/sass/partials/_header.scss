@@ -84,17 +84,20 @@ header {
     flex-grow: 1;
 }
 
-// searchBar feature
+// SEARCH BAR FEATURE
 .searchButton {
+    // search bar absolute to button icon
     position: relative;
 }
 
 .searchToggle {
+    // input hidden from user
     display: none;
 }
 
 .searchToggleLabel {
 
+    // link appearance for hamburger menu
     &:hover,
     &:focus {
         cursor: pointer;
@@ -102,27 +105,53 @@ header {
 }
 
 .searchBarContainer {
-    display: flex;
+    // dimension
     width: 325px;
+    // flex format
+    display: flex;
+    // relative to search button icon
     position: absolute;
+    // initial positioning
     top: 35px;
     right: 0px;
+    // hidden from user
     opacity: 0;
     visibility: hidden;
+    // transition
     transition: 0.3s ease;
 }
 
 .searchBar {
+    // dimensions
     min-width: 160px;
     height: 100%;
+    // styling
     border-radius: 50px 0 0 50px;
     padding: 5px 10px;
     flex-grow: 1;
 }
 
-.searchButton {
+.searchSubmit {
     width: 40px;
     border-radius: 0 50px 50px 0;
+    position: relative;
+
+    svg {
+        // initial color
+        fill: $preHoverWhite;
+        transition: 0.3s ease;
+        // rel to search submit button
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+
+    &:hover,
+    &:focus {
+        svg {
+            fill: $primeWhite;
+        }
+    }
 }
 
 .searchToggle {
@@ -237,7 +266,6 @@ header {
         align-self: flex-end;
 
         // toggle effects
-        // transform: scale(1, 0);
         opacity: 0;
         visibility: hidden;
         transition: 0.2s ease;

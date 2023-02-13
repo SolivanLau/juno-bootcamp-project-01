@@ -541,10 +541,10 @@ header a {
 }
 
 .searchBarContainer {
+  width: 325px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 325px;
   position: absolute;
   top: 35px;
   right: 0px;
@@ -564,9 +564,21 @@ header a {
           flex-grow: 1;
 }
 
-.searchButton {
+.searchSubmit {
   width: 40px;
   border-radius: 0 50px 50px 0;
+  position: relative;
+}
+.searchSubmit svg {
+  fill: rgba(246, 246, 246, 0.6588235294);
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.searchSubmit:hover svg, .searchSubmit:focus svg {
+  fill: #F6F6F6;
 }
 
 .searchToggle:checked ~ .searchBarContainer {
