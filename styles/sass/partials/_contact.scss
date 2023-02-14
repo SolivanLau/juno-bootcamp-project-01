@@ -1,19 +1,18 @@
 @use "./variables" as *;
 
-// flex format: style boxes
 .contactUs {
+    // flex format: format boxe left and right
     display: flex;
     width: 100%;
 
+    // wrapper adjustment
     .wrapper {
         width: 100%;
     }
-
-
 }
 
-// flex format:
 .formatBox {
+    // flex format: general flex
     display: flex;
 
     .wrapper {

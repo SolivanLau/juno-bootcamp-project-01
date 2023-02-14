@@ -1,5 +1,6 @@
 @use "./variables" as *;
 
+// page specific font adjustment
 h3 {
     text-transform: uppercase;
 }
@@ -120,10 +121,6 @@ h3 {
     .wrapper {
         padding: 30px 0;
     }
-
-
-
-
 }
 
 // post layout
@@ -146,7 +143,12 @@ h3 {
     }
 }
 
-// post pic and overlay settings
+.picLink {
+    // HOT FIX: unsure why link had initial height of 200px - had to add class to specify height
+    height: 100%;
+}
+
+// post pic 
 .postPic {
     position: relative;
     width: 100%;
@@ -154,16 +156,24 @@ h3 {
 
 // overlay effect
 .overlay {
+    // dimensions
     width: 100%;
     height: 100%;
+    // relative to parent object
+    position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    position: absolute;
+    // animation
     opacity: 0;
     transition: 0.3s ease-in-out;
     background-color: $overlaySecGreen;
+
+    &:hover,
+    &:focus {
+        opacity: 1;
+    }
 }
 
 // post data text
@@ -245,8 +255,10 @@ h3 {
 
 // msg tail styling
 .msgTailContainer {
+    // dimensions
     width: 30px;
     height: 30px;
+    // relative to msg container
     position: absolute;
     top: 18px;
     left: -29px;

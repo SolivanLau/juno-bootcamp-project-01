@@ -18,6 +18,8 @@ $primeFont: 'Raleway', sans-serif;
 $baseFont: 'Lora', serif;
 
 // typographic  styles
+// NOTE REGARDING FONT SIZE AND ACCESSIBILITY
+// I initially followed design specs and ignored standards for accessibility. spoke with 2 instructors on whether to continue following design specs - I was told to leave my work as is and submit it. 
 
 @mixin titleFont {
     font-family: $primeFont;
@@ -63,7 +65,7 @@ $baseFont: 'Lora', serif;
 @mixin bodyFont {
     font-family: $baseFont;
     font-weight: 400;
-    font-size: 0.7rem; //14px computed
+    font-size: 0.7rem; //14px computed NOTE: suggest designer to use  0.9rem (18px computed) to reach accessibility standards
     line-height: 1.2rem; //24px computed
     letter-spacing: 0.015rem; //.3px computed
 }
@@ -72,7 +74,7 @@ $baseFont: 'Lora', serif;
     font-family: $baseFont;
     font-weight: 400;
     text-align: left;
-    font-size: 0.65rem; //13px computed
+    font-size: 0.65rem; //13px computed NOTE: suggest designer to use  0.9rem (18px computed) to reach accessibility standards
     line-height: 1.2rem; //24px computed
     letter-spacing: 0.015rem; //.3px computed
 }
