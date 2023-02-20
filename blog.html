@@ -259,9 +259,9 @@
             <div class="wrapper">
                 <h3>02 Comments</h3>
                 
-                <div class="commentDisplay">
+                <ul class="commentDisplay" id="commentDisplay">
                     <!-- COMMENT ONE -->
-                    <div class="individualComment">
+                    <li class="individualComment">
 
                         <!-- profilePic -->
                         <a href="#" class="picLink">
@@ -288,10 +288,10 @@
                                   </svg> 
                             </div>
                         </div>
-                    </div>
+                    </li>
 
                     <!-- COMMENT TWO -->
-                    <div class="individualComment">
+                    <li class="individualComment">
                         <!-- profilePic -->
                         <a href="#" class="picLink">
                             <figure class="profilePic commentItem">
@@ -320,11 +320,13 @@
                                   </svg> 
                             </div>
                         </div>
-                    </div>
-                </div>
+                    </li>
+
+
+                </ul>
 
                 <!-- USER COMMENT FORM -->
-                <form action="#" class="userComment">
+                <form action="#" id="commentForm" class="userComment">
                     <!-- intro to form -->
                     <div class="formIntro">
                         <h3>Leave a Comment</h3>
@@ -337,7 +339,7 @@
                         
                         <!-- email input-->
                         <label for="email" class="sr-only">Enter email</label>
-                        <input type="email" name="email" id="email" placeholder="Email *" required>
+                        <input type="email" name="email" id="email" placeholder="Email *">
                         <!-- website input -->
                         <label for="website" class="sr-only">Enter website url</label>
                         <input type="text" name="website" id="website" placeholder="Your Website">
@@ -499,5 +501,6 @@
             <p>Copyright 2023 by <a href="#">POLAR</a> All rights reserved</p>
         </div>
     </footer>
+    <script src="./commentApp.js"></script>
 </body>
 </html>

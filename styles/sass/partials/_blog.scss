@@ -203,6 +203,12 @@ h3 {
     position: relative;
 }
 
+.noProfilePic {
+    height: 70px;
+    width: 70px;
+    background-color: $primeGrey;
+}
+
 .msgContainer {
     // flex format
     flex-basis: calc(80% - 30px);

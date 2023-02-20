@@ -1094,7 +1094,19 @@ footer a {
           align-items: center;
   padding: 100px;
 }
-.testimonial p {
+
+.quoteContainer {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 200px;
+}
+
+.quote {
   font-family: "Lora", serif;
   font-weight: 400;
   font-style: italic;
@@ -1103,10 +1115,9 @@ footer a {
   line-height: 1.8rem;
   letter-spacing: 0.03rem;
   color: #333333;
-}
-
-.quoteContainer {
-  position: relative;
+  width: auto;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .quotationMarks::before,
@@ -1114,6 +1125,8 @@ footer a {
   color: #F6F6F6;
   position: absolute;
   font-size: 140px;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .quotationMarks::before {
@@ -1128,9 +1141,46 @@ footer a {
   right: -50px;
 }
 
-.navArrow {
-  margin-top: 100px;
-  width: 120px;
+.quoteIndicator {
+  width: 100%;
+  height: 20px;
+}
+
+.indicatorList {
+  padding: 5px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.indicatorItem {
+  width: 10px;
+  aspect-ratio: 1/1;
+  margin: 0 5px;
+}
+.indicatorItem:hover {
+  cursor: pointer;
+}
+.indicatorItem:hover svg {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+  fill: rgba(246, 246, 246, 0.6588235294);
+}
+.indicatorItem svg {
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  fill: rgba(153, 153, 153, 0.1294117647);
+}
+.indicatorItem .currentQuote {
+  fill: #F6F6F6;
+}
+
+.navArrowContainer {
+  margin-top: 20px;
+  width: 160px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1141,15 +1191,21 @@ footer a {
       -ms-flex-align: center;
           align-items: center;
 }
+
+.navArrow:hover, .navArrow:focus {
+  cursor: pointer;
+}
 .navArrow svg {
-  height: 65px;
-  width: 65px;
+  height: 90px;
+  width: 90px;
   fill: rgba(246, 246, 246, 0.6588235294);
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
 }
 .navArrow svg:hover {
   fill: #F6F6F6;
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
 }
 
 h3 {
@@ -1339,6 +1395,12 @@ h3 {
   -ms-flex-preferred-size: 10%;
       flex-basis: 10%;
   position: relative;
+}
+
+.noProfilePic {
+  height: 70px;
+  width: 70px;
+  background-color: #999999;
 }
 
 .msgContainer {

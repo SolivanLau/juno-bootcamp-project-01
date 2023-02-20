@@ -183,15 +183,23 @@
     justify-content: center;
     align-items: center;
     padding: 100px;
-
-    p {
-        @include quoteFont;
-        color: $secBlack;
-    }
 }
 
+// quote container
 .quoteContainer {
     position: relative;
+    display: flex;
+    align-items: center;
+    // fixed height for js populate
+    min-height: 200px;
+}
+
+// quote styles
+.quote {
+    @include quoteFont;
+    color: $secBlack;
+    width: auto;
+    transition: 0.3s ease-in-out;
 }
 
 .quotationMarks::before,
@@ -199,6 +207,7 @@
     color: $primeWhite;
     position: absolute;
     font-size: 140px;
+    transition: 0.3s ease-in-out
 }
 
 .quotationMarks::before {
@@ -213,22 +222,71 @@
     right: -50px;
 }
 
-.navArrow {
-    margin-top: 100px;
-    width: 120px;
+// QUOTE INDICATOR SECTION
+.quoteIndicator {
+    width: 100%;
+    height: 20px;
+}
+
+.indicatorList {
+    // breathing room
+    padding: 5px 0;
+    // flex format: all items in center
+    display: flex;
+    justify-content: center;
+}
+
+.indicatorItem {
+    width: 10px;
+    aspect-ratio: 1 / 1;
+    margin: 0 5px;
+
+    &:hover {
+        cursor: pointer;
+
+
+        svg {
+            transform: scale(1.3);
+            fill: $preHoverWhite;
+        }
+    }
+
+    svg {
+        transition: 0.2s ease-in-out;
+        fill: $secGrey;
+    }
+
+
+    .currentQuote {
+        fill: $primeWhite;
+    }
+}
+
+// QUOTE NAVIGATION SECTION
+.navArrowContainer {
+    margin-top: 20px;
+    width: 160px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
 
-    & svg {
-        height: 65px;
-        width: 65px;
+.navArrow {
+
+    &:hover,
+    &:focus {
+        cursor: pointer;
+    }
+
+    svg {
+        height: 90px;
+        width: 90px;
         fill: $preHoverWhite;
         transition: 0.2s ease;
 
         &:hover {
             fill: $primeWhite;
+            transform: scale(1.3);
         }
     }
-
 }
