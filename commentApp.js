@@ -23,14 +23,21 @@ const $commentWeb = document.querySelector('#website')
 
 
 // FUNCTIONS
+// populate comment - main handler for form submit
 function populateComment(event) {
     event.preventDefault();
 
     // create new li to contain comment html
     const newComment = document.createElement('li');
+    // determines if a dash is needed
+    if ($userWebInput.value.length >= 1) {
+        '-' + $userWebInput.value
+    }
+
     // add styling class
     newComment.classList.add('individualComment');
-    newComment.innerHTML = `<!-- profilePic -->
+    newComment.innerHTML = `<!-- comment from ${$userNameInput.value} -->
+    <!-- profilePic -->
     <a href="#" class="picLink">
         <figure class="profilePic commentItem">
             <div class="noProfilePic"></div>
@@ -43,7 +50,7 @@ function populateComment(event) {
             <a href="#">
                 <h4 id="commentName">${$userNameInput.value}</h4>
             </a>
-            <p class="postData">${'-' + $userWebInput.value}</p>
+            <p class="postData">${$userWebInput.value}</p>
         </div>
         <p id="commentPost">${$userCommentInput.value}</p>
         <div class="timeStampContainer">
@@ -57,8 +64,29 @@ function populateComment(event) {
     </div>`
     $commentDisplay.appendChild(newComment);
 
-    console.log($commentName);
+
+    // word counter to determine. string to evaluate. create
+    function wordCounter(string, wordCapNum) {
+        let wordTotal = 0;
+        //set one integer ahead of actual word count
+        let wordCap = wordCapNum;
+        // removal of any whitespace
+        const userComment = string.trim().split(' ');
+        // use split function to define  pattern of single space as a separator
+
+        wordTotal = userComment.length;
+        // end function w returning total number
+        const moreButton = `<span class="moreButton" id="moreButton">...</span>`
+
+        userComment[wordCap + 1].innerHTML = moreButton;
+    }
+
+    wordCounter($userCommentInput.value, 2);
 }
 
 
 $commentForm.addEventListener('submit', populateComment)
+
+
+
+
