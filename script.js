@@ -46,10 +46,11 @@ let dataTracker = Math.floor((quoteData.length - 1) / 2);
 
 // evaluation function:if li index value === datatracker: fill svg child w color to begin
 function indicatorEval() {
-
-    for (let child = 0; child <= quoteData.length - 1; child++) {
+    for (let child = 0; child < quoteData.length; child++) {
         const indicatorChildren = $indicatorContainer.children
+
         const svgChild = indicatorChildren[child].children[0];
+
         if (indicatorChildren[child].value === dataTracker) {
             svgChild.classList.add('currentQuote');
         } else {
@@ -69,7 +70,7 @@ function nextFunctionality() {
     // Increase w cap according to quote data
     const maxQuote = quoteData.length - 1;
 
-    dataTracker++ - 1;
+    dataTracker++;
     if (dataTracker <= maxQuote) {
         console.log(`tracker at ${dataTracker} out of a max number of ${maxQuote}`)
     } else {
@@ -77,7 +78,6 @@ function nextFunctionality() {
     }
     populateQuote();
     indicatorEval();
-
 }
 // previous button functionality
 
@@ -85,7 +85,7 @@ function previousFunctionality() {
     // decrease w cap according to quote data
     const maxQuote = quoteData.length - 1;
 
-    dataTracker-- + 1;
+    dataTracker--;
 
     if (dataTracker >= 0) {
         console.log(`tracker at ${dataTracker} out of a max number of ${maxQuote}`)
